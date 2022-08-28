@@ -1,0 +1,34 @@
+<<<<<<All Bundle Dependencies>>>>>>
+Total Num:5
+
+bundleName: assets_scenes_prefabs_cylinder.prefab.ab
+dependNum: 0
+{
+}
+---------------------------------------------------
+
+bundleName: assets_scenes_prefabs_plane.prefab.ab
+dependNum: 0
+{
+}
+---------------------------------------------------
+
+bundleName: assets_scenes_prefabs_sphere.prefab.ab
+dependNum: 0
+{
+}
+---------------------------------------------------
+
+bundleName: assets_scenes_prefabs_new_folder_capsule.prefab.ab
+dependNum: 0
+{
+}
+---------------------------------------------------
+
+bundleName: assets_scenes_prefabs_new_folder_cube.prefab.ab
+dependNum: 1
+{
+assets_scenes_prefabs_cylinder.prefab.ab
+}
+---------------------------------------------------
+

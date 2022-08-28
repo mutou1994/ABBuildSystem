@@ -1,0 +1,8 @@
+[2022-08-28 06:04:20] 【Root】 【assets_scenes_prefabs_cylinder.prefab.ab】 Assets/Scenes/Prefabs/Cylinder.prefab
+[2022-08-28 06:04:20] 【Root】 【assets_scenes_prefabs_plane.prefab.ab】 Assets/Scenes/Prefabs/Plane.prefab
+[2022-08-28 06:04:20] 【Root】 【assets_scenes_prefabs_sphere.prefab.ab】 Assets/Scenes/Prefabs/Sphere.prefab
+[2022-08-28 06:04:20] 【Root】 【assets_scenes_prefabs_new_folder_capsule.prefab.ab】 Assets/Scenes/Prefabs/New Folder/Capsule.prefab
+[2022-08-28 06:04:20] 【Root】 【assets_scenes_prefabs_new_folder_cube.prefab.ab】 Assets/Scenes/Prefabs/New Folder/Cube.prefab
+[2022-08-28 06:04:20] 【Root】 【assets_assetconfig.bytes.ab】 Assets/AssetConfig.bytes
+
+
