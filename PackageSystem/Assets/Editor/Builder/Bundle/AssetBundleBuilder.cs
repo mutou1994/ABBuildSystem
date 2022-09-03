@@ -9,25 +9,6 @@ using System.Text.RegularExpressions;
 public class AssetBundleBuilder
 {
     static string[] AnyPatterns = { "*.*" };
-    [MenuItem("ABTools/BuildTest")]
-    public static void BuildTest()
-    {
-        string path = AssetDatabase.GetAssetPath(Selection.activeObject);
-
-        AssetBundleBuild build = new AssetBundleBuild();
-        build.assetBundleName = AssetBundleBuildUtils.ToBundleName(path);
-        build.assetNames = new string[] { path };
-
-        if (!Directory.Exists(AssetBundleBuildUtils.BundleSavePath))
-        {
-            Directory.CreateDirectory(AssetBundleBuildUtils.BundleSavePath);
-        }
-        List<AssetBundleBuild> list = new List<AssetBundleBuild>() 
-        { 
-            build
-        };
-        AssetBundleManifest manifest = BuildPipeline.BuildAssetBundles(AssetBundleBuildUtils.BundleSavePath, list.ToArray(), BuildAssetBundleOptions.ChunkBasedCompression | BuildAssetBundleOptions.DeterministicAssetBundle | BuildAssetBundleOptions.DisableWriteTypeTree, EditorUserBuildSettings.activeBuildTarget);
-    }
 
     [MenuItem("ABTools/BuildABTotal")]
     public static void BuildABTotal()
@@ -356,14 +337,17 @@ public class AssetBundleBuilder
         {
             index++;
             EditorUtility.DisplayProgressBar("Analyze", "AnalyzeDependencies:" + asset.filePath, (float)index / count);
-            /*if(asset.noPackIfNoRef)
-            {
+            //if(asset.noPackIfNoRef)
+            //{
                 //没有引用则不打包的资源，不确定最终是否会打包，所以不主动分析依赖
-            }
-            else
-            {*/
+            //}
+            //else
+            //{
+                //noPackIfNoRef的资源也应该分析依赖，
+                //noPackIfNoRef的资源若没有引用会最终会转为NoPack类型，不会影响所引用资源的打包，
+                //但如果有引用，却没有分析依赖，则会导致所引用资源的Root依赖次数统计不正确，最终影响打包
                 asset.AnalyzeDependencies();
-            /*}*/
+            //}
         }
         all = AssetBundleBuildUtils.GetAllAssets();
         index = 0;
@@ -577,7 +561,7 @@ public class AssetBundleBuilder
                     bundleName = AssetBundleBuildUtils.ToBundleName(dir);
                     foreach(var pattern in patterns)
                     {
-                        var files = Directory.GetFiles(dir, pattern, SearchOption.AllDirectories);
+                        var files = Directory.GetFiles(dir, pattern, SearchOption.TopDirectoryOnly);
                         foreach(var file in files)
                         {
                             PackOneFile(file, bundleName, assetInfo.AnalyzeDependency, assetInfo.mergeIfOneRef, assetInfo.noPackIfNoRef);

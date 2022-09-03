@@ -56,19 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\Builder\PackageConfigs.cs" />
+    <Compile Include="Assets\Editor\Builder\Configs\PackageConfigs.cs" />
     <Compile Include="Assets\Editor\Builder\Logger\BuildLogger.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\BuildSetting.cs" />
     <Compile Include="Assets\Editor\Builder\Logger\AssetBuildInfoLogger.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\AssetBundleBuilder.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\AssetBundleBuildUtils.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\AssetBuildInfoUtils.cs" />
+    <Compile Include="Assets\Editor\Builder\Patch\PatchInfos.cs" />
     <Compile Include="Assets\Editor\Builder\Patch\PatchBuildUtils.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\BundleItemInfo.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\AssetBuildInfos.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\AssetItemInfo.cs" />
     <Compile Include="Assets\Editor\Md5Tool.cs" />
-    <Compile Include="Assets\Editor\Builder\Patch\PatchInfos.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

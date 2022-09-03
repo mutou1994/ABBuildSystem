@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: PackageConfigs
   m_EditorClassIdentifier: 
   assetConfigs:
-  - groupName: allPrefab
+  - groupName: 
     exportType: 1
     assetInfos:
     - asset: {fileID: 102900000, guid: 64ad01a3a0cf28045ae160d7ce098314, type: 3}
       searchPattern: '*.*'
       mergeIfOneRef: 0
       noPackIfNoRef: 0
+    - asset: {fileID: 102900000, guid: 4c61a62b961d4ab439fedfd3e231c2da, type: 3}
+      searchPattern: '*.png|*.jpg'
+      mergeIfOneRef: 1
+      noPackIfNoRef: 1
