@@ -1,23 +1,23 @@
 # 一个可自动分析依赖关系的无冗余打包工具
 ### 打包策略配置
 ![Alt text](./1662189234853.png)
-**Group：**资源配置按照Group -> Item 划分，一个Group可以包含多个Item。
-**ExportType：**每个Group可以选择不同的ExportType，
+**Group：** 资源配置按照Group -> Item 划分，一个Group可以包含多个Item。
+**ExportType：** 每个Group可以选择不同的ExportType，
 1.以Group为单位全部打到一个以GroupNaem命名的包里。
 2.每个文件单独打一个AB。
 3.以Item为单位每个Item打一个AB，包名取Item的目录或资源名。
 4.以Item为单位，每个Item的第一级目录或资源文件打一个AB。
 5.以Item为单位，每个Item的每一级目录或资源文件打一个AB。
-**GroupName：**当ExportType选为AllInOnePack时的包名，若不填，则取第一个Item的目录或资源名。
+**GroupName：** 当ExportType选为AllInOnePack时的包名，若不填，则取第一个Item的目录或资源名。
 **Item：**每个Item可以是文件夹或具体资源文件。
-**SearchPattern：**若Item是文件夹，则可以按照文件后缀检索资源文件。
-**MergeIfOneRef：**配置若资源只有一个引用，则与被引用的资源合并打到一个AB里。
-**NoPackIfNoRef：**配置若资源没有被任何其它资源引用，则不参与打包。
+**SearchPattern：** 若Item是文件夹，则可以按照文件后缀检索资源文件。
+**MergeIfOneRef：** 配置若资源只有一个引用，则与被引用的资源合并打到一个AB里。
+**NoPackIfNoRef：** 配置若资源没有被任何其它资源引用，则不参与打包。
 
 ### 依赖分析
 依据ExportType配置以及依赖关系，将所有需要打包的资源分为这6种类型。
 ![Alt text](./1662191077989.png)
-**Root资源：**按照ExportType配置首次Load进来的资源全都默认设置为Root类型。
+**Root资源：** 按照ExportType配置首次Load进来的资源全都默认设置为Root类型。
 #### 收集依赖资源，并构建依赖关系
 ##### 收集依赖资源
 使用Unity  EditorUtility.CollectDependencies接口收集所有依赖资源，剔除系统内置资源和Root类型的资源，全部标记为Asset类型。
@@ -33,8 +33,8 @@
 由于Unity构建AB的时候会自动分析资源之间的依赖关系，没有设置Bundle名的资源将被合并到被依赖的AB中打包，而设置过Bundle名的资源，将会和被依赖的资源构成依赖关系，Unity在打被依赖的资源的时候就不会包含该资源。如A依赖B，若B没有设置Bundle，则将会被合并到A的包里，若设置了Bundle则A的包里就不会包含B，避免打包的时候资源冗余。
 
 **显式合并打包**
-而打包的时候可能会出现这种现象，A B C三个资源，A B 都设置了Bundle独立打包，C被A和B共同引用，但是A同时还引用了B，也就是C其实是A的间接引用，是B的直接引用，那么C其实只需要与B合并打包即可，只需将C的Bundle设置为与B相同，而不用为C单独设置Bundle，我称这种现象为**显式合并打包**。
-而若C只被B直接引用，且没有被其他任何资源直接或间接引用，则无需为C设置任何Bundle名，Unity将会自动将C合并到B的包里，我称这种现象为**隐式合并打包**。
+而打包的时候可能会出现这种现象，A B C三个资源，A B 都设置了Bundle独立打包，C被A和B共同引用，但是A同时还引用了B，也就是C其实是A的间接引用，是B的直接引用，那么C其实只需要与B合并打包即可，只需将C的Bundle设置为与B相同，而不用为C单独设置Bundle，我称这种现象为 **显式合并打包** 。
+而若C只被B直接引用，且没有被其他任何资源直接或间接引用，则无需为C设置任何Bundle名，Unity将会自动将C合并到B的包里，我称这种现象为 **隐式合并打包** 。
 
 依据构建出来的依赖关系，统计资源被Root类型依赖的次数。
 **对于Root类型的资源，即通过打包配置首次Load进来的资源：**
