@@ -14,12 +14,21 @@ public class AssetBuildItem
 }
 
 [Serializable]
+public class BuildBundleItem
+{
+    public string bundle;
+    public string[] refBundles;
+    public string[] assets;
+}
+
+[Serializable]
 public class AssetBuildInfos
 {
     public string version;
     public string time;
     public int count;
     public List<AssetBuildItem> buildInfos = new List<AssetBuildItem>();
+    public List<BuildBundleItem> bundleInfos = new List<BuildBundleItem>();
 
     public AssetBuildInfos()
     {
@@ -41,6 +50,16 @@ public class AssetBuildInfos
         return buildItem;
     }
 
+    public void AddBuildBundleItem(string bundleName, string[] refBundleNames, string[] assets)
+    {
+        bundleInfos.Add(new BuildBundleItem
+        {
+            bundle = bundleName,
+            refBundles = refBundleNames,
+            assets = assets,
+        });
+    }
+
     public Dictionary<string, AssetBuildItem> GetBuildInfosMap()
     {
         Dictionary<string, AssetBuildItem> map = new Dictionary<string, AssetBuildItem>();
@@ -59,5 +78,35 @@ public class AssetBuildInfos
             }
         }
         return map;
+    }
+
+    public Dictionary<string, BundleInfo> GetBundleInfosMap()
+    {
+        Dictionary<string, BundleInfo> bundleInfoMap = new Dictionary<string, BundleInfo>();
+        for(int i=0; i < bundleInfos.Count; i++)
+        {
+            var bundleItem = bundleInfos[i];
+            if(!bundleInfoMap.ContainsKey(bundleItem.bundle))
+            {
+                bundleInfoMap.Add(bundleItem.bundle, new BundleInfo
+                {
+                    bundleName = bundleItem.bundle,
+                    refBundles = new HashSet<string>(bundleItem.refBundles),
+                    assets = new HashSet<string>(bundleItem.assets),
+                });
+            }
+            else
+            {
+                Debug.LogError(string.Format("Error: Dunplicate BundleInfos BundleName:{0}", bundleItem.bundle));
+                BuildLogger.LogError("Error: Dunplicate BundleInfos bundleName:{0}", bundleItem.bundle);
+                bundleInfoMap[bundleItem.bundle] = new BundleInfo
+                {
+                    bundleName = bundleItem.bundle,
+                    refBundles = new HashSet<string>(bundleItem.refBundles),
+                    assets = new HashSet<string>(bundleItem.assets),
+                };
+            }
+        }
+        return bundleInfoMap;
     }
 }

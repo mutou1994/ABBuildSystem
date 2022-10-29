@@ -1,0 +1,17 @@
+[2022-10-29 04:26:20]  【INFO】  BuildAB begain on platform: StandaloneWindows64......
+[2022-10-29 04:26:21]  【INFO】  ClearPreBuildAB cost time: 0s
+[2022-10-29 04:26:21]  【INFO】  MakeABSetting cost time: 0s
+[2022-10-29 04:26:21]  【INFO】  Analyze cost time: 0s
+[2022-10-29 04:26:21]  【INFO】  GenerateDependenciesConfig cost time: 0s
+[2022-10-29 04:26:21]  【INFO】  Begain GenerateBuildInfos
+[2022-10-29 04:26:21]  【INFO】  Finish GenerateBuildInfos, buildinfo Num:6
+[2022-10-29 04:26:21]  【INFO】  Begain GenerateBuildAssets
+[2022-10-29 04:26:21]  【INFO】  GenerateBuildAssets Finish, Bundles Num:6
+[2022-10-29 04:26:21]  【INFO】  Compare PreVersion cost time: 0s
+[2022-10-29 04:26:23]  【INFO】  Begain Remove Manifest
+[2022-10-29 04:26:23]  【INFO】  Remove Manifest Finish Cost Time: 0
+[2022-10-29 04:26:23]  【INFO】  ExportAB cost time: 2s
+[2022-10-29 04:26:23]  【INFO】  UpdateBuildVersionContext: path-G:/Project/ABBuildSystem/PackageSystem/Assets/../../AssetBuildInfo/PackageSystem/win64/Config/BuildInfo/buildversion.txt, version-1.001p0
+[2022-10-29 04:26:23]  【INFO】  SaveBuildInfos cost time: 0s
+[2022-10-29 04:26:23]  【INFO】  Build AB Finish cost time: 2s
+[2022-10-29 04:26:23]  【INFO】  SaveLog ......

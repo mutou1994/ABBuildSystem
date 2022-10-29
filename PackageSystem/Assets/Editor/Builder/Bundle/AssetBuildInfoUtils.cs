@@ -5,6 +5,14 @@ using UnityEditor;
 using System;
 using System.IO;
 using System.Text;
+using System.Linq;
+
+public struct BundleInfo 
+{
+    public string bundleName;
+    public HashSet<string> refBundles;
+    public HashSet<string> assets;
+}
 
 
 public class AssetBuildInfoUtils
@@ -17,7 +25,9 @@ public class AssetBuildInfoUtils
     static AssetBuildInfos curBuildInfos;
     static AssetBuildInfos preBuildInfos;
     static Dictionary<string, AssetBuildItem> CurBuildInfoMap;
+    static Dictionary<string, BundleInfo> CurBundleInfoMap;
     static Dictionary<string, AssetBuildItem> PreBuildInfoMap;
+    static Dictionary<string, BundleInfo> PreBundleInfoMap;
 
     public static List<AssetItemInfo> ChangedAssets = new List<AssetItemInfo>();
 
@@ -25,30 +35,30 @@ public class AssetBuildInfoUtils
     {
         string str = "win32";
         BuildTarget activeBuildTarget = EditorUserBuildSettings.activeBuildTarget;
-        if(activeBuildTarget == BuildTarget.StandaloneWindows)
+        if (activeBuildTarget == BuildTarget.StandaloneWindows)
         {
             str = "win32";
         }
-        else if(activeBuildTarget == BuildTarget.StandaloneWindows64)
+        else if (activeBuildTarget == BuildTarget.StandaloneWindows64)
         {
             str = "win64";
         }
-        else if(activeBuildTarget == BuildTarget.iOS)
+        else if (activeBuildTarget == BuildTarget.iOS)
         {
             str = "ios";
         }
-        else if(activeBuildTarget == BuildTarget.Android)
+        else if (activeBuildTarget == BuildTarget.Android)
         {
             str = "android";
         }
         return str;
     }
-    
+
     public static string ProjRootName
     {
         get
         {
-            if(string.IsNullOrEmpty(projName))
+            if (string.IsNullOrEmpty(projName))
             {
                 string dataPath = Application.dataPath.Replace("\\", "/");
                 dataPath = dataPath.Substring(0, dataPath.LastIndexOf("/Assets"));
@@ -62,11 +72,11 @@ public class AssetBuildInfoUtils
     {
         get
         {
-            if(string.IsNullOrEmpty(buildInfoPath))
+            if (string.IsNullOrEmpty(buildInfoPath))
             {
                 buildInfoPath = string.Format("{0}/../../AssetBuildInfo/{1}/{2}", Application.dataPath, ProjRootName, GetPlatformName());
             }
-            if(!Directory.Exists(buildInfoPath))
+            if (!Directory.Exists(buildInfoPath))
             {
                 Directory.CreateDirectory(buildInfoPath);
             }
@@ -78,7 +88,7 @@ public class AssetBuildInfoUtils
     {
         get
         {
-            if(string.IsNullOrEmpty(configSavePath))
+            if (string.IsNullOrEmpty(configSavePath))
             {
                 configSavePath = string.Format("{0}/Config/BuildInfo", BuildInfoPath);
             }
@@ -86,20 +96,13 @@ public class AssetBuildInfoUtils
         }
     }
 
-    /*public static string ReleaseVersionPath
-    {
-        get
-        {
-            return string.Format("{0}/../releasepackage/version.txt", Application.dataPath);
-        }
-    }*/
 
     public static string BuildVersionPath
     {
         get
         {
             return string.Format("{0}/Config/BuildInfo/buildversion.txt", BuildInfoPath);
-        }   
+        }
     }
 
     public static void Clear()
@@ -108,15 +111,25 @@ public class AssetBuildInfoUtils
         prePatchVersion = 0;
         curBuildInfos = null;
         preBuildInfos = null;
-        if(CurBuildInfoMap != null)
+        if (CurBuildInfoMap != null)
         {
             CurBuildInfoMap.Clear();
             CurBuildInfoMap = null;
         }
-        if(PreBuildInfoMap != null)
+        if (CurBundleInfoMap != null)
+        {
+            CurBundleInfoMap.Clear();
+            CurBundleInfoMap = null;
+        }
+        if (PreBuildInfoMap != null)
         {
             PreBuildInfoMap.Clear();
             PreBuildInfoMap = null;
+        }
+        if (PreBundleInfoMap != null)
+        {
+            PreBundleInfoMap.Clear();
+            PreBundleInfoMap = null;
         }
         ChangedAssets.Clear();
     }
@@ -124,9 +137,9 @@ public class AssetBuildInfoUtils
     public static void UpdateGameVersion(bool isPatch)
     {
         int patchVersion = 0;
-        if(isPatch)
+        if (isPatch)
         {
-            if(!BuildSetting.Instance.GameVersion.Equals(preGameVersion))
+            if (!BuildSetting.Instance.GameVersion.Equals(preGameVersion))
             {
                 BuildSetting.Instance.GameVersion = preGameVersion;
             }
@@ -141,21 +154,10 @@ public class AssetBuildInfoUtils
         AssetDatabase.Refresh();
     }
 
-    /*public static void UpdateReleaseVersionContext(string version)
-    {
-        string directoryName = Path.GetDirectoryName(ReleaseVersionPath);
-        if(!Directory.Exists(directoryName))
-        {
-            Directory.CreateDirectory(directoryName);
-        }
-        BuildLogger.LogInfo("UpdateBuildVersionContext: path-{0},version-{1}", BuildVersionPath, version);
-        File.WriteAllText(BuildVersionPath, version);
-    }*/
-
     public static void UpdateBuildVersionContext(string version)
     {
         string directoryName = Path.GetDirectoryName(BuildVersionPath);
-        if(!Directory.Exists(directoryName))
+        if (!Directory.Exists(directoryName))
         {
             Directory.CreateDirectory(directoryName);
         }
@@ -163,34 +165,25 @@ public class AssetBuildInfoUtils
         File.WriteAllText(BuildVersionPath, version);
     }
 
-    /*public static void UpdateProjectSettingVersion(string version)
-    {
-        BuildLogger.LogInfo("UpdateProjectSettingVersion|target:{0}, versioin:{1}", activeBuildTarget, version);
-        BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
-        if(target <= BuildTarget.Android)
-        {
-            PlayerSettings.bundleVersion = version;
-        }
-    }*/
-
     public static void GenerateBuildInfos()
     {
         BuildLogger.LogInfo("Begain GenerateBuildInfos");
         EditorUtility.DisplayProgressBar("GenerateBuildInfos", "Begain GenerateBuildInfos", 0);
         CurBuildInfoMap = new Dictionary<string, AssetBuildItem>();
+        CurBundleInfoMap = new Dictionary<string, BundleInfo>();
         curBuildInfos = new AssetBuildInfos();
         var all = AssetBundleBuildUtils.GetAllAssets();
         int count = all.Count;
         int index = 0;
-        foreach(var asset in all)
+        foreach (var asset in all)
         {
             index++;
-            EditorUtility.DisplayProgressBar("GenerateBuildInfos", string.Format("【{0}】 {1}", asset.assetType.ToString(), asset.filePath), (float)(index)/count);
+            EditorUtility.DisplayProgressBar("GenerateBuildInfos", string.Format("【{0}】 {1}", asset.assetType.ToString(), asset.filePath), (float)(index) / count);
             //非主动导出资源也应该记录比较差异 因为隐式合并的资源有变动的话，其所合并的包也应该重打
             //NoRefNoPack为没有引用，不需要打包的资源 所以不需要记录MD5
-            if(asset.assetType != AssetType.NoPack)
+            if (asset.assetType != AssetType.NoPack)
             {
-                if(!CurBuildInfoMap.ContainsKey(asset.filePath))
+                if (!CurBuildInfoMap.ContainsKey(asset.filePath))
                 {
                     var item = curBuildInfos.AddBuildItem(asset.filePath, asset.assetType.ToString(), asset.bundleName);
                     CurBuildInfoMap.Add(asset.filePath, item);
@@ -202,7 +195,25 @@ public class AssetBuildInfoUtils
                     Debug.LogError(string.Format("Error!!! Dunplicate Asset When Generate BuildInfos Path:{0}", asset.filePath));
                     BuildLogger.LogError("Error!!! Dunplicate Asset When Generate BuildInfos Path:{0}", asset.filePath);
                 }
+
+                if (!CurBundleInfoMap.ContainsKey(asset.bundleName))
+                {
+                    var refs = AssetBundleBuildUtils.GetRefBundles(asset.bundleName);
+                    CurBundleInfoMap.Add(asset.bundleName, new BundleInfo
+                    {
+                        bundleName = asset.bundleName,
+                        refBundles = refs != null ? new HashSet<string>(refs) : new HashSet<string>(),
+                        assets = new HashSet<string>(),
+                    });
+                }
+                CurBundleInfoMap[asset.bundleName].assets.Add(asset.filePath);
             }
+        }
+        foreach (var pair in CurBundleInfoMap)
+        {
+            var bundleName = pair.Key;
+            var bundleInfo = pair.Value;
+            curBuildInfos.AddBuildBundleItem(bundleName, bundleInfo.refBundles.ToArray(), bundleInfo.assets.ToArray());
         }
         EditorUtility.ClearProgressBar();
         BuildLogger.LogInfo("Finish GenerateBuildInfos, buildinfo Num:{0}", curBuildInfos.count);
@@ -223,7 +234,7 @@ public class AssetBuildInfoUtils
         {
             string preVersion = File.ReadAllText(BuildVersionPath);
             string path = string.Format("{0}/buildinfo_{1}.json", ConfigSavePath, preVersion);
-            if(File.Exists(path))
+            if (File.Exists(path))
             {
                 string content = File.ReadAllText(path);
                 string[] strs = preVersion.Split('p');
@@ -233,6 +244,7 @@ public class AssetBuildInfoUtils
                 preBuildInfos = JsonUtility.FromJson<AssetBuildInfos>(content);
                 EditorUtility.DisplayProgressBar("Begain ReadPreBuildInfos", "ReadJson Finished" + preBuildInfos.count, 0.5f);
                 PreBuildInfoMap = preBuildInfos.GetBuildInfosMap();
+                PreBundleInfoMap = preBuildInfos.GetBundleInfosMap();
                 EditorUtility.DisplayProgressBar("Begain ReadPreBuildInfos", "Generate PreBuildInfoMap finished", 1);
                 EditorUtility.ClearProgressBar();
                 return true;
@@ -256,7 +268,7 @@ public class AssetBuildInfoUtils
     {
         curBuildInfos.version = BuildSetting.Instance.Version;
         string path = string.Format("{0}/buildinfo_{1}.json", ConfigSavePath, BuildSetting.Instance.Version);
-        if(Directory.Exists(ConfigSavePath))
+        if (Directory.Exists(ConfigSavePath))
         {
             Directory.CreateDirectory(ConfigSavePath);
         }
@@ -268,7 +280,7 @@ public class AssetBuildInfoUtils
     {
         string filePath = asset.filePath;
         AssetBuildItem preInfo = null;
-        if(PreBuildInfoMap != null)
+        if (PreBuildInfoMap != null)
         {
             PreBuildInfoMap.TryGetValue(filePath, out preInfo);
         }
@@ -279,7 +291,7 @@ public class AssetBuildInfoUtils
     {
         string filePath = asset.filePath;
         AssetBuildItem curInfo = null;
-        if(CurBuildInfoMap != null)
+        if (CurBuildInfoMap != null)
         {
             CurBuildInfoMap.TryGetValue(filePath, out curInfo);
         }
@@ -289,7 +301,7 @@ public class AssetBuildInfoUtils
     public static bool IsAssetChanged(AssetItemInfo asset)
     {
         string filePath = asset.filePath;
-        if(!CurBuildInfoMap.ContainsKey(filePath))
+        if (!CurBuildInfoMap.ContainsKey(filePath))
         {
             Debug.LogError("Error!!! BuildInfo Not Found When Check Asset Change! path:" + filePath);
             BuildLogger.LogError("Error!!! BuildInfo Not Found When Check Asset Change! path:{0}", filePath);
@@ -299,15 +311,15 @@ public class AssetBuildInfoUtils
             return true;
         var preInfo = PreBuildInfoMap[filePath];
         var curInfo = CurBuildInfoMap[filePath];
-        if(!preInfo.assetType.Equals(curInfo.assetType))
+        if (!preInfo.assetType.Equals(curInfo.assetType))
         {
             return true;
         }
-        if(!preInfo.bundleName.Equals(curInfo.bundleName))
+        if (!preInfo.bundleName.Equals(curInfo.bundleName))
         {
             return true;
         }
-        if(!IsMetaImportant(asset))
+        if (!IsMetaImportant(asset))
         {
             return !preInfo.md5.Equals(curInfo.md5);
         }
@@ -318,9 +330,42 @@ public class AssetBuildInfoUtils
         }
     }
 
+    public static bool IsBundleChanged(string bundleName)
+    {
+        if (PreBundleInfoMap == null || !PreBundleInfoMap.ContainsKey(bundleName))
+            return true;
+        var preBundleInfo = PreBundleInfoMap[bundleName];
+        var curBundleInfo = CurBundleInfoMap[bundleName];
+        if (preBundleInfo.refBundles.Count != curBundleInfo.refBundles.Count)
+            return true;
+        if (preBundleInfo.assets.Count != curBundleInfo.assets.Count)
+            return true;
+        foreach (string refBundle in preBundleInfo.refBundles)
+        {
+            if (!curBundleInfo.refBundles.Contains(refBundle))
+                return true;
+        }
+        foreach (string asset in preBundleInfo.assets)
+        {
+            if (!curBundleInfo.assets.Contains(asset))
+                return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Texture
+    /// AudioClip
+    /// Mesh
+    /// Model
+    /// Shader
+    /// 这些类型的Asset的一些配置式放在.meta中的，所以要监视它们的变化
+    /// </summary>
+    /// <param name="assetItem"></param>
+    /// <returns></returns>
     public static bool IsMetaImportant(AssetItemInfo assetItem)
     {
-        if(assetItem.asset is Texture || assetItem.asset is AudioClip || 
+        if (assetItem.asset is Texture || assetItem.asset is AudioClip ||
             assetItem.asset is Mesh || assetItem.asset is Shader)
         {
             return true;
@@ -332,7 +377,7 @@ public class AssetBuildInfoUtils
 
     public static bool CacheChangedAsset(AssetItemInfo asset)
     {
-        if(IsAssetChanged(asset))
+        if (IsAssetChanged(asset))
         {
             ChangedAssets.Add(asset);
             return true;
@@ -385,4 +430,53 @@ public class AssetBuildInfoUtils
         sb = null;
     }
 
+    private static string BundleInfosLogPath
+    {
+        get
+        {
+            string path = string.Format("{0}/BundleInfosLog/bundleInfos_{1}-{2}.txt",
+                buildInfoPath, DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss"), BuildSetting.Instance.Version);
+            string directoryName = Path.GetDirectoryName(path);
+            if(!Directory.Exists(directoryName))
+            {
+                Directory.CreateDirectory(directoryName);
+            }
+            return path;
+        }
+    }
+
+    public static void SaveAllBundleInfos()
+    {
+        string path = BundleInfosLogPath;
+        if(File.Exists(path))
+        {
+            File.Delete(path);
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine("<<<<<<All BundleInfos Dependencies and Include Assets>>>>>>");
+        sb.AppendFormat("Total Num:{0}\n\n", CurBundleInfoMap.Count);
+        foreach(var pair in CurBundleInfoMap)
+        {
+            var bundleInfo = pair.Value;
+            sb.AppendFormat("bundleName: {0}\n", bundleInfo.bundleName);
+            sb.AppendFormat("dependNum: {0}\n", bundleInfo.refBundles.Count.ToString());
+            sb.AppendLine("{");
+            foreach(string refBundle in bundleInfo.refBundles)
+            {
+                sb.AppendLine(refBundle);
+            }
+            sb.AppendLine("}");
+
+            sb.AppendFormat("assetsNum: {0}\n", bundleInfo.assets.Count.ToString());
+            sb.AppendLine("{");
+            foreach(string asset in bundleInfo.assets)
+            {
+                sb.AppendLine(asset);
+            }
+            sb.AppendLine("}");
+            sb.AppendLine("--------------------------------------------------------------\n");
+        }
+        File.WriteAllText(BundleInfosLogPath, sb.ToString());
+        sb.Clear();
+    }
 }

@@ -69,6 +69,7 @@
     <Compile Include="Assets\Editor\Builder\Bundle\AssetBuildInfos.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\AssetItemInfo.cs" />
     <Compile Include="Assets\Editor\Md5Tool.cs" />
+    <Compile Include="Assets\Editor\Builder\Bundle\AssetRedundancyChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

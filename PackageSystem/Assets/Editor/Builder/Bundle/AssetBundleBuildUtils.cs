@@ -15,7 +15,13 @@ public class AssetBundleBuildUtils
     static Dictionary<string, AssetItemInfo> AllAssetInfos = new Dictionary<string, AssetItemInfo>();
     static Dictionary<string, BundleItemInfo> AllBundleInfos = new Dictionary<string, BundleItemInfo>();
 
+    /// <summary>
+    /// 最终需要重新打包的AB， BuildBundles可能包含了一些没有变动，但是因为依赖关系的原因而需要重新打包的AB
+    /// </summary>
     public static HashSet<string> BuildBundles = new HashSet<string>();
+    /// <summary>
+    /// 本次打包有变动的AB 用于制作Patch
+    /// </summary>
     public static HashSet<string> ChangedBundles = new HashSet<string>();
 
     public static string ToBundleName(string path)
@@ -42,6 +48,23 @@ public class AssetBundleBuildUtils
     public static List<AssetItemInfo> GetAllAssets()
     {
         return new List<AssetItemInfo>(AllAssetInfos.Values);
+    }
+
+    public static string[] GetRefBundles(string bundleName)
+    {
+        if(!AllBundleInfos.ContainsKey(bundleName))
+        {
+            Debug.LogError("Bundle Not Exists:" + bundleName);
+            return null;
+        }
+        BundleItemInfo bundleItem = AllBundleInfos[bundleName];
+        var refChilds = bundleItem.GetRefChilds();
+        string[] refBundleNames = new string[refChilds.Length];
+        for(int i = 0; i < refChilds.Length; i++)
+        {
+            refBundleNames[i] = refChilds[i].bundleName;
+        }
+        return refBundleNames;
     }
 
     public static AssetItemInfo LoadAssetItem(string filePath)
@@ -83,7 +106,7 @@ public class AssetBundleBuildUtils
             //即使是非独立打包资源，隐式打包的资源也可能会因为有变动而导致所合并的包重打
             if (asset.assetType == AssetType.NoPack)
                 continue;
-            if (!AssetBuildInfoUtils.CacheChangedAsset(asset))
+            if (!AssetBuildInfoUtils.CacheChangedAsset(asset) && !AssetBuildInfoUtils.IsBundleChanged(asset.bundleName))
                 continue;
             if (ChangedBundles.Contains(asset.bundleName))
                 continue;
@@ -197,50 +220,10 @@ public class AssetBundleBuildUtils
         assetItem.analyzeDependency = false;
         assetItem.noPackIfNoRef = false;
         assetItem.mergeIfOneRef = false;
+        AllBundleInfos.Add(assetItem.bundleName, new BundleItemInfo(assetItem.bundleName));
     }
 
-    private static string ABDepsLogPath
-    {
-        get
-        {
-            string path = string.Format("{0}/BundleDepsLog/bundleDeps_{1}-{2}.txt", AssetBuildInfoUtils.BuildInfoPath, DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss"), BuildSetting.Instance.Version);
-            string directoryName = Path.GetDirectoryName(path);
-            if(!Directory.Exists(directoryName))
-            {
-                Directory.CreateDirectory(directoryName);
-            }
-            return path;
-        }
-    }
-
-    public static void SaveAllBundleDependencies()
-    {
-        string path = ABDepsLogPath;
-        if(File.Exists(path))
-        {
-            File.Delete(path);
-        }
-        StringBuilder sb = new StringBuilder();
-        sb.AppendLine("<<<<<<All Bundle Dependencies>>>>>>");
-        sb.AppendFormat("Total Num:{0}\n\n", AllBundleInfos.Count);
-        foreach(var pair in AllBundleInfos)
-        {
-            var bundleInfo = pair.Value;
-            sb.AppendFormat("bundleName: {0}\n", bundleInfo.bundleName);
-            sb.AppendFormat("dependNum: {0}\n", bundleInfo.RefCount.ToString());
-            sb.AppendLine("{");
-            foreach(BundleItemInfo depBundle in bundleInfo.GetRefChilds())
-            {
-                sb.AppendLine(depBundle.bundleName);
-            }
-            sb.AppendLine("}");
-            sb.AppendLine("---------------------------------------------------\n");
-            // writer.WriteLine();
-        }
-        File.WriteAllText(path, sb.ToString());
-    }
-
-    private static string DepsLogPath 
+    private static string AssetDepsLogPath 
     {
         get
         {
@@ -254,9 +237,9 @@ public class AssetBundleBuildUtils
         }
     }
 
-    public static void SaveAllDependencies()
+    public static void SaveAllAssetsDependencies()
     {
-        string path = DepsLogPath;
+        string path = AssetDepsLogPath;
         if(File.Exists(path))
         {
             File.Delete(path);

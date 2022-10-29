@@ -1,0 +1,57 @@
+<<<<<<Bundle RedundancyInfos>>>>>>>
+<<<<<<Redundancy Num:2>>>>>>
+
+redundancyAssetPath: resources/unity_builtin_extra
+refed AB Num: 5
+{
+
+BundleName:assets_scenes_prefabs_cylinder.prefab.ab
+Refed Byassets/scenes/prefabs/cylinder.prefab
+redundancyAsset:Standard
+
+BundleName:assets_scenes_prefabs_new_folder_capsule.prefab.ab
+Refed Byassets/scenes/prefabs/new folder/capsule.prefab
+redundancyAsset:Standard
+
+BundleName:assets_scenes_prefabs_new_folder_cube.prefab.ab
+Refed Byassets/scenes/prefabs/new folder/cube.prefab
+redundancyAsset:Standard
+
+BundleName:assets_scenes_prefabs_plane.prefab.ab
+Refed Byassets/scenes/prefabs/plane.prefab
+redundancyAsset:Standard
+
+BundleName:assets_scenes_prefabs_sphere.prefab.ab
+Refed Byassets/scenes/prefabs/sphere.prefab
+redundancyAsset:Standard
+
+}
+----------------------------------------------------------------------
+
+redundancyAssetPath: library/unity default resources
+refed AB Num: 5
+{
+
+BundleName:assets_scenes_prefabs_cylinder.prefab.ab
+Refed Byassets/scenes/prefabs/cylinder.prefab
+redundancyAsset:Cylinder
+
+BundleName:assets_scenes_prefabs_new_folder_capsule.prefab.ab
+Refed Byassets/scenes/prefabs/new folder/capsule.prefab
+redundancyAsset:Capsule
+
+BundleName:assets_scenes_prefabs_new_folder_cube.prefab.ab
+Refed Byassets/scenes/prefabs/new folder/cube.prefab
+redundancyAsset:Cube
+
+BundleName:assets_scenes_prefabs_plane.prefab.ab
+Refed Byassets/scenes/prefabs/plane.prefab
+redundancyAsset:Plane
+
+BundleName:assets_scenes_prefabs_sphere.prefab.ab
+Refed Byassets/scenes/prefabs/sphere.prefab
+redundancyAsset:Sphere
+
+}
+----------------------------------------------------------------------
+

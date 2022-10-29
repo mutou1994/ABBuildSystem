@@ -72,15 +72,19 @@ public class AssetBundleBuilder
         AssetBuildInfoUtils.UpdateGameVersion(false);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
+        AssetRedundancyChecker.CheckBundleRedundancy();
         AssetBuildInfoUtils.SaveBuildInfos();
         AssetBuildInfoUtils.SaveAssetChangeInfos();
-        AssetBundleBuildUtils.SaveAllDependencies();
-        AssetBundleBuildUtils.SaveAllBundleDependencies();
+        AssetBundleBuildUtils.SaveAllAssetsDependencies();
+        AssetBuildInfoUtils.SaveAllBundleInfos();
         BuildLogger.LogInfo("SaveBuildInfos cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
         AssetBuildInfoLogger.SaveLog();
         BuildLogger.LogInfo("Build AB Finish cost time: {0}s", (int)(DateTime.Now - startTime).TotalSeconds);
         BuildLogger.SaveLog();
         Debug.LogError("BuildAB Finished");
+
+        AssetBundleBuildUtils.Clear();
+        AssetBuildInfoUtils.Clear();
     }
 
     static void RemoveManifest()
@@ -181,6 +185,9 @@ public class AssetBundleBuilder
                 time = DateTime.Now;
                 AssetBundleManifest bundleManifest = ExportAB();
                 RemoveManifest();
+                time = DateTime.Now;
+                RemoveUnUsedAB();
+                BuildLogger.LogInfo("RemoveUnUsedAB cost time : {0}s", (int)(DateTime.Now - time).TotalSeconds);
                 BuildLogger.LogInfo("ExportAB cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
                 time = DateTime.Now;
                 AssetBuildInfoUtils.UpdateGameVersion(true);
@@ -189,10 +196,11 @@ public class AssetBundleBuilder
                 AssetDatabase.SaveAssets();
                 AssetDatabase.Refresh();
                 time = DateTime.Now;
+                AssetRedundancyChecker.CheckBundleRedundancy();
                 AssetBuildInfoUtils.SaveBuildInfos();
                 AssetBuildInfoUtils.SaveAssetChangeInfos();
-                AssetBundleBuildUtils.SaveAllDependencies();
-                AssetBundleBuildUtils.SaveAllBundleDependencies();
+                AssetBundleBuildUtils.SaveAllAssetsDependencies();
+                AssetBuildInfoUtils.SaveAllBundleInfos();
                 BuildLogger.LogInfo("SaveBuildInfos cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
                 AssetBuildInfoLogger.SaveLog();
             }
@@ -203,6 +211,10 @@ public class AssetBundleBuilder
             BuildLogger.LogInfo("BuildAB_Patch finish total cost time: {0}s", (int)(DateTime.Now - startTime).TotalSeconds);
             BuildLogger.SaveLog();
             Debug.LogError("BuildAB_Patch finished");
+
+            AssetBuildInfoUtils.Clear();
+            PatchBuildUtils.Clear();
+            AssetBundleBuildUtils.Clear();
         }
     }
 

@@ -45,12 +45,12 @@ public class AssetItemInfo
     }
 
     /// <summary>
-    /// 依赖我的资源
+    /// 直接依赖我的资源
     /// </summary>
     private HashSet<AssetItemInfo> RefParentSet = new HashSet<AssetItemInfo>();
 
     /// <summary>
-    /// 我依赖的资源
+    /// 我直接依赖的资源
     /// </summary>
     private HashSet<AssetItemInfo> RefChildSet = new HashSet<AssetItemInfo>();
 

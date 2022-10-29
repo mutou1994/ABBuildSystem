@@ -17,6 +17,11 @@ public class BundleItemInfo
     /// </summary>
     private HashSet<BundleItemInfo> RefChildSet = new HashSet<BundleItemInfo>();
 
+    public override int GetHashCode()
+    {
+        return bundleName.GetHashCode();
+    }
+
     public BundleItemInfo(string bundleName)
     {
         this.bundleName = bundleName;

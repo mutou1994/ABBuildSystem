@@ -1,0 +1,60 @@
+<<<<<<All Asset Dependencies>>>>>>
+Total Num:7
+
+filePath: Assets/Scenes/Prefabs/Cylinder.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_cylinder.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/Plane.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_plane.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/Sphere.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_sphere.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/New Folder/Capsule.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_new_folder_capsule.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/New Folder/Cube.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_new_folder_cube.prefab.ab
+dependNum: 1
+{
+Assets/Scenes/Prefabs/Cylinder.prefab
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Images/20220128124643.png
+assetType: NoPack
+bundleName: assets_scenes_images_20220128124643.png.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/AssetConfig.bytes
+assetType: Root
+bundleName: assets_assetconfig.bytes.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
