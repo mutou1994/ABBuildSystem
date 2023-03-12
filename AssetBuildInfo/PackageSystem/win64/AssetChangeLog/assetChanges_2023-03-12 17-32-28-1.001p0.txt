@@ -1,0 +1,131 @@
+<<<<<<Pre In Left, Cur In Right>>>>>>
+Total Num:16
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+assetType: Null | Root
+bundleName: Null | buildinshaders.ab
+Md5: Null | a38b8f15b9e700785c68c246feaa5a1d
+IsImportMeta: True
+MetaMd5: Null | 4702672287dfbbb3594b54c7977cd77e
+--------------------------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Standard.shader
+assetType: Null | Root
+bundleName: Null | buildinshaders.ab
+Md5: Null | cfac2c5a09f6ddfdddd1efa9ddfe4715
+IsImportMeta: True
+MetaMd5: Null | b39312a6c327b293bfae41548a3bb254
+--------------------------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/BuildInAssetsTest.prefab
+assetType: Null | Root
+bundleName: Null | assets_scenes_prefabs_buildinassetstest.prefab.ab
+Md5: Null | 7dab317c42e26897a26b0c1009656a8e
+IsImportMeta: False
+MetaMd5: Null | 320b39c41d0d41289c5beae5691e5f59
+--------------------------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/Cylinder.prefab
+assetType: Null | Root
+bundleName: Null | assets_scenes_prefabs_cylinder.prefab.ab
+Md5: Null | 40ba004c46520fc0d64cbc86f51eace4
+IsImportMeta: False
+MetaMd5: Null | f68f87ed98c96d39ab3064fde75f5828
+--------------------------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/Plane.prefab
+assetType: Null | Root
+bundleName: Null | assets_scenes_prefabs_plane.prefab.ab
+Md5: Null | 218dc342ef0359bcd46fa0dce07b9e97
+IsImportMeta: False
+MetaMd5: Null | 0769abbcf218db658a1de94b7efabc8b
+--------------------------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/Sphere.prefab
+assetType: Null | Root
+bundleName: Null | assets_scenes_prefabs_sphere.prefab.ab
+Md5: Null | a11e636920a9e3283afc121527b6cfbb
+IsImportMeta: False
+MetaMd5: Null | e1826f6b1f2f03e998b4910575ee0ef6
+--------------------------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/New Folder/Capsule.prefab
+assetType: Null | Root
+bundleName: Null | assets_scenes_prefabs_new_folder_capsule.prefab.ab
+Md5: Null | fbe9f2ab6df043c7e69eb5ac1f8d4df9
+IsImportMeta: False
+MetaMd5: Null | 90e94f66074fb9e8be2e558436580e30
+--------------------------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/New Folder/Cube.prefab
+assetType: Null | Root
+bundleName: Null | assets_scenes_prefabs_new_folder_cube.prefab.ab
+Md5: Null | b9d4965593549363fd33affe47829e59
+IsImportMeta: False
+MetaMd5: Null | 76ef0a36d0454d51e45faf620332dde1
+--------------------------------------------------------------
+
+filePath: Assets/BuildInAssets/Image/UISprite.png
+assetType: Null | Asset
+bundleName: Null | assets_scenes_prefabs_buildinassetstest.prefab.ab
+Md5: Null | d4ff07321f7a3d66219a057cc7a3436b
+IsImportMeta: True
+MetaMd5: Null | e1972dea25653014122ed709c1180797
+--------------------------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Cylinder.mesh
+assetType: Null | Merge
+bundleName: Null | assets_scenes_prefabs_cylinder.prefab.ab
+Md5: Null | 8b94c78c6a875b120d942688a662271b
+IsImportMeta: True
+MetaMd5: Null | 4aae1339b4028b3bf7001ff854760e1d
+--------------------------------------------------------------
+
+filePath: Assets/BuildInAssets/Material/Default-Material.mat
+assetType: Null | StandAlone
+bundleName: Null | assets_buildinassets_material_default-material.mat.ab
+Md5: Null | 2879768cdc7a88ba16ac93083900d761
+IsImportMeta: False
+MetaMd5: Null | 0a7f4739cbbe70fe0d7bc658d10111f1
+--------------------------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Plane.mesh
+assetType: Null | Asset
+bundleName: Null | assets_scenes_prefabs_plane.prefab.ab
+Md5: Null | 8d1d82494c45947fb7ec192144b0807c
+IsImportMeta: True
+MetaMd5: Null | 72537c3a0c6bcf437194fdda75a955c5
+--------------------------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Sphere.mesh
+assetType: Null | Asset
+bundleName: Null | assets_scenes_prefabs_sphere.prefab.ab
+Md5: Null | 716a72801b0472f5f392d7a5fdacd64a
+IsImportMeta: True
+MetaMd5: Null | 1259443f200f2ee1921144d06360a030
+--------------------------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Capsule.mesh
+assetType: Null | Asset
+bundleName: Null | assets_scenes_prefabs_new_folder_capsule.prefab.ab
+Md5: Null | a08ee922dc3931831d59c326562afa53
+IsImportMeta: True
+MetaMd5: Null | 9ecbf8f78f6bbfe7553f07e6a3e63d3a
+--------------------------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Cube.mesh
+assetType: Null | Asset
+bundleName: Null | assets_scenes_prefabs_new_folder_cube.prefab.ab
+Md5: Null | fb3367c66072241de28c5fea47658d5c
+IsImportMeta: True
+MetaMd5: Null | 6982c6fe13262dee6a03b167408ee645
+--------------------------------------------------------------
+
+filePath: Assets/AssetConfig.bytes
+assetType: Null | Root
+bundleName: Null | assets_assetconfig.bytes.ab
+Md5: Null | d3e1311fab679d2679e20845f8efda3e
+IsImportMeta: False
+MetaMd5: Null | f33f76e8248d85ee136e2980dd3699d1
+--------------------------------------------------------------
+

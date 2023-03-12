@@ -1,0 +1,19 @@
+[2023-03-12 05:32:20]  【INFO】  BuildAB begain on platform: StandaloneWindows64......
+[2023-03-12 05:32:20]  【INFO】  ClearPreBuildAB cost time: 0s
+[2023-03-12 05:32:24]  【INFO】  MakeABSetting cost time: 0s
+[2023-03-12 05:32:25]  【INFO】  ReplaceBuildInAssetsReference cost time: 0s
+[2023-03-12 05:32:25]  【INFO】  Analyze cost time: 0s
+[2023-03-12 05:32:25]  【INFO】  GenerateDependenciesConfig cost time: 0s
+[2023-03-12 05:32:25]  【INFO】  Begain GenerateBuildInfos
+[2023-03-12 05:32:25]  【INFO】  Finish GenerateBuildInfos, buildinfo Num:16
+[2023-03-12 05:32:25]  【INFO】  Begain GenerateBuildAssets
+[2023-03-12 05:32:25]  【INFO】  GenerateBuildAssets Finish, Bundles Num:9
+[2023-03-12 05:32:25]  【INFO】  Compare PreVersion cost time: 0s
+[2023-03-12 05:32:28]  【INFO】  Begain Remove Manifest
+[2023-03-12 05:32:28]  【INFO】  Remove Manifest Finish Cost Time: 0
+[2023-03-12 05:32:28]  【INFO】  ExportAB cost time: 2s
+[2023-03-12 05:32:28]  【INFO】  UpdateBuildVersionContext: path-G:/Project/ABBuildSystem/PackageSystem/Assets/../../AssetBuildInfo/PackageSystem/win64/Config/BuildInfo/buildversion.txt, version-1.001p0
+[2023-03-12 05:32:28]  【INFO】  SaveBuildInfos cost time: 0s
+[2023-03-12 05:32:29]  【INFO】  RevertBuildInAssetsReference cost time: 0s
+[2023-03-12 05:32:29]  【INFO】  Build AB Finish cost time: 8s
+[2023-03-12 05:32:29]  【INFO】  SaveLog ......

@@ -73,9 +73,6 @@ public class AssetBundleBuilder
         }
         BuildLogger.LogInfo("ExportAB cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
         time = DateTime.Now;
-        RevertBuildInAssetsReference();
-        BuildLogger.LogInfo("RevertBuildInAssetsReference cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
-        time = DateTime.Now;
         AssetBuildInfoUtils.UpdateGameVersion(false);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
@@ -85,6 +82,9 @@ public class AssetBundleBuilder
         AssetBundleBuildUtils.SaveAllAssetsDependencies();
         AssetBuildInfoUtils.SaveAllBundleInfos();
         BuildLogger.LogInfo("SaveBuildInfos cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
+        time = DateTime.Now;
+        RevertBuildInAssetsReference();
+        BuildLogger.LogInfo("RevertBuildInAssetsReference cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
         AssetBuildInfoLogger.SaveLog();
         BuildLogger.LogInfo("Build AB Finish cost time: {0}s", (int)(DateTime.Now - startTime).TotalSeconds);
         BuildLogger.SaveLog();
@@ -198,9 +198,6 @@ public class AssetBundleBuilder
                 BuildLogger.LogInfo("RemoveUnUsedAB cost time : {0}s", (int)(DateTime.Now - time).TotalSeconds);
                 BuildLogger.LogInfo("ExportAB cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
                 time = DateTime.Now;
-                RevertBuildInAssetsReference();
-                BuildLogger.LogInfo("RevertBuildInAssetsReference cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
-                time = DateTime.Now;
                 AssetBuildInfoUtils.UpdateGameVersion(true);
                 PatchBuildUtils.GeneratePatchs();
                 BuildLogger.LogInfo("GenerateReleasePackage cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
@@ -213,6 +210,9 @@ public class AssetBundleBuilder
                 AssetBundleBuildUtils.SaveAllAssetsDependencies();
                 AssetBuildInfoUtils.SaveAllBundleInfos();
                 BuildLogger.LogInfo("SaveBuildInfos cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
+                time = DateTime.Now;
+                RevertBuildInAssetsReference();
+                BuildLogger.LogInfo("RevertBuildInAssetsReference cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
                 AssetBuildInfoLogger.SaveLog();
             }
             else

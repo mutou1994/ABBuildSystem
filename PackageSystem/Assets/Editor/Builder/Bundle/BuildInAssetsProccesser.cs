@@ -441,6 +441,7 @@ public class BuildInAssetsProccesser
             Type type = null;
             if(asset is Mesh)
             {
+                typeVal = 2;
                 localPath = meshRelaPath + asset.name + ".mesh";
                 type = typeof(Mesh);
             }

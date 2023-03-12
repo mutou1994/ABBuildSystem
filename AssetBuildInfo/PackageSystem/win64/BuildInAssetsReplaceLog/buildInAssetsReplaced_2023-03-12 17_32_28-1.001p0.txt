@@ -133,7 +133,7 @@ Assets/Scenes/Prefabs/Cylinder.prefab
 [
     Cylinder (UnityEngine.Mesh)  ===>>>  Cylinder (UnityEngine.Mesh)
     Cylinder  ===>>>  Assets/BuildInAssets/Mesh/Cylinder.mesh
-    {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: 657ba82216162854e89e4177e0ac39ee, type: 3}
+    {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: 657ba82216162854e89e4177e0ac39ee, type: 2}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
@@ -144,7 +144,7 @@ Assets/Scenes/Prefabs/Plane.prefab
 [
     Plane (UnityEngine.Mesh)  ===>>>  Plane (UnityEngine.Mesh)
     Plane  ===>>>  Assets/BuildInAssets/Mesh/Plane.mesh
-    {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: cbe138cde4b757c40b841b1ba49bcc4b, type: 3}
+    {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: cbe138cde4b757c40b841b1ba49bcc4b, type: 2}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
@@ -155,7 +155,7 @@ Assets/Scenes/Prefabs/Sphere.prefab
 [
     Sphere (UnityEngine.Mesh)  ===>>>  Sphere (UnityEngine.Mesh)
     Sphere  ===>>>  Assets/BuildInAssets/Mesh/Sphere.mesh
-    {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: ba96a718c298cee4d9024992c85ba139, type: 3}
+    {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: ba96a718c298cee4d9024992c85ba139, type: 2}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
@@ -166,7 +166,7 @@ Assets/Scenes/Prefabs/New Folder/Capsule.prefab
 [
     Capsule (UnityEngine.Mesh)  ===>>>  Capsule (UnityEngine.Mesh)
     Capsule  ===>>>  Assets/BuildInAssets/Mesh/Capsule.mesh
-    {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: 618bc9b53a3472e4cabaa34dfba7fc15, type: 3}
+    {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: 618bc9b53a3472e4cabaa34dfba7fc15, type: 2}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
@@ -177,7 +177,7 @@ Assets/Scenes/Prefabs/New Folder/Cube.prefab
 [
     Cube (UnityEngine.Mesh)  ===>>>  Cube (UnityEngine.Mesh)
     Cube  ===>>>  Assets/BuildInAssets/Mesh/Cube.mesh
-    {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: bd9bc39cab8bb2648be7066bd1e3df2f, type: 3}
+    {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: bd9bc39cab8bb2648be7066bd1e3df2f, type: 2}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
@@ -316,7 +316,7 @@ Assets/Scenes/Prefabs/Cylinder.prefab
 [
     Cylinder (UnityEngine.Mesh)  ===>>>  Cylinder (UnityEngine.Mesh)
     Assets/BuildInAssets/Mesh/Cylinder.mesh  ===>>>  Cylinder
-    {fileID: 4300000, guid: 657ba82216162854e89e4177e0ac39ee, type: 3}  ===>>>  {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+    {fileID: 4300000, guid: 657ba82216162854e89e4177e0ac39ee, type: 2}  ===>>>  {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Assets/BuildInAssets/Material/Default-Material.mat  ===>>>  Default-Material
@@ -327,7 +327,7 @@ Assets/Scenes/Prefabs/Plane.prefab
 [
     Plane (UnityEngine.Mesh)  ===>>>  Plane (UnityEngine.Mesh)
     Assets/BuildInAssets/Mesh/Plane.mesh  ===>>>  Plane
-    {fileID: 4300000, guid: cbe138cde4b757c40b841b1ba49bcc4b, type: 3}  ===>>>  {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+    {fileID: 4300000, guid: cbe138cde4b757c40b841b1ba49bcc4b, type: 2}  ===>>>  {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Assets/BuildInAssets/Material/Default-Material.mat  ===>>>  Default-Material
@@ -338,7 +338,7 @@ Assets/Scenes/Prefabs/Sphere.prefab
 [
     Sphere (UnityEngine.Mesh)  ===>>>  Sphere (UnityEngine.Mesh)
     Assets/BuildInAssets/Mesh/Sphere.mesh  ===>>>  Sphere
-    {fileID: 4300000, guid: ba96a718c298cee4d9024992c85ba139, type: 3}  ===>>>  {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    {fileID: 4300000, guid: ba96a718c298cee4d9024992c85ba139, type: 2}  ===>>>  {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Assets/BuildInAssets/Material/Default-Material.mat  ===>>>  Default-Material
@@ -349,7 +349,7 @@ Assets/Scenes/Prefabs/New Folder/Capsule.prefab
 [
     Capsule (UnityEngine.Mesh)  ===>>>  Capsule (UnityEngine.Mesh)
     Assets/BuildInAssets/Mesh/Capsule.mesh  ===>>>  Capsule
-    {fileID: 4300000, guid: 618bc9b53a3472e4cabaa34dfba7fc15, type: 3}  ===>>>  {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+    {fileID: 4300000, guid: 618bc9b53a3472e4cabaa34dfba7fc15, type: 2}  ===>>>  {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Assets/BuildInAssets/Material/Default-Material.mat  ===>>>  Default-Material
@@ -360,7 +360,7 @@ Assets/Scenes/Prefabs/New Folder/Cube.prefab
 [
     Cube (UnityEngine.Mesh)  ===>>>  Cube (UnityEngine.Mesh)
     Assets/BuildInAssets/Mesh/Cube.mesh  ===>>>  Cube
-    {fileID: 4300000, guid: bd9bc39cab8bb2648be7066bd1e3df2f, type: 3}  ===>>>  {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    {fileID: 4300000, guid: bd9bc39cab8bb2648be7066bd1e3df2f, type: 2}  ===>>>  {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 
     Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
     Assets/BuildInAssets/Material/Default-Material.mat  ===>>>  Default-Material

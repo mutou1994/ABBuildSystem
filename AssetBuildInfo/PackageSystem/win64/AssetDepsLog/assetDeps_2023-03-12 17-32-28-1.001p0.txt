@@ -1,0 +1,3036 @@
+<<<<<<All Asset Dependencies>>>>>>
+Total Num:365
+
+filePath: Assets/BuildInAssets/Shader/license.txt
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/AutoLight.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/EditorUIE.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/GLSLSupport.glslinc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/GraniteShaderLib3.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/HLSLSupport.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/Lighting.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/SpeedTree8Common.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/SpeedTreeBillboardCommon.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/SpeedTreeCommon.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/SpeedTreeVertex.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/SpeedTreeWind.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/TerrainEngine.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/TerrainPreview.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/TerrainSplatmapCommon.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/TerrainTool.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/Tessellation.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/TextCoreProperties.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityBuiltin2xTreeLibrary.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityBuiltin3xTreeLibrary.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityCG.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityCG.glslinc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityCustomRenderTexture.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityDeferredLibrary.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityDeprecated.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityGBuffer.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityGlobalIllumination.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityImageBasedLighting.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityInstancing.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityLegacyTextureStack.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityLightingCommon.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityMetaPass.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityPBSLighting.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityRayTracingMeshUtils.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityShaderUtilities.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityShaderVariables.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityShadowLibrary.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnitySprites.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardBRDF.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardConfig.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardCore.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardCoreForward.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardCoreForwardSimple.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardInput.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardMeta.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardParticleEditor.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardParticleInstancing.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardParticles.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardParticleShadow.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardShadow.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStandardUtils.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStereoExtensions.glslinc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityStereoSupport.glslinc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityUI.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/CGIncludes/UnityUIE.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Font.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Internal-BlendShape.compute
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Internal-Clear.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Internal-Colored.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Internal-ErrorShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Internal-Loading.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Internal-Skinning-Util.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Internal-Skinning.compute
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Internal-VT-TranslationTableReplace.compute
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/Internal-VT-TranslationTableUpsample.compute
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResources/PerformanceTools/FrameDebuggerRenderTargetDisplay.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-Bumped.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-BumpSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-Diffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-Glossy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-Parallax.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-Bumped.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-ParallaxSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-BumpSpec.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-VertexLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-Bumped.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-BumpSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-Diffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-Glossy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-SoftEdgeUnlit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-VertexLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/AutodeskInteractive.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Compositing.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Decal.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Flare.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-Bumped.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-BumpSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-Glossy.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-Diffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-Glossy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-Parallax.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-Bumped.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-ParallaxSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-BumpSpec.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Illumin-VertexLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-BlitCopy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-BlitCopyDepth.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-BlitCopyHDRTonemap.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-BlitCopyWithDepth.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-BlitToDepth.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-BlitToDepth_MSAA.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-CombineDepthNormals.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-ConvertTexture.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-CubemapToEquirect.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-DeferredReflections.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-DeferredShading.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-DepthNormalsTexture.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-Flare.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-GUIRoundedRect.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-GUITextureClip.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-GUIRoundedRectWithColorPerBorder.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-GUITextureClip.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-GUITexture.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-GUITextureBlit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-GUITextureClip.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-GUITextureClipText.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-Halo.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-MotionVectors.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-ODSWorldTexture.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-PrePassLighting.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-ScreenSpaceShadows.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Internal-StencilWrite.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Lightmap-Bumped.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Lightmap-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Lightmap-BumpSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Lightmap-Bumped.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Lightmap-Diffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Lightmap-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Lightmap-Glossy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Lightmap-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Lightmap-VertexLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Bumped.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-BumpSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Glossy.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-DiffuseDetail.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-DiffuseFast.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Glossy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Parallax.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Bumped.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-ParallaxSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-BumpSpec.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+assetType: Root
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Add.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle AddMultiply.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle AddSmooth.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Alpha Blend.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Anim Alpha Blend.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Blend.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Multiply.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle MultiplyDouble.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Premultiply Blend.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Standard Surface.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Standard Unlit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle VertexLit Blended.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-Bumped.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-BumpNolight.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-BumpSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-Bumped.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-BumpVertexLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-VertexLit.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-BumpNolight.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-Diffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-Glossy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-Parallax.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-Bumped.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-ParallaxSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-BumpSpec.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Reflect-VertexLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Skybox-Cubed.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Skybox-Panoramic.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Skybox-Procedural.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Skybox.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Sprites-Default.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Sprites-Diffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Alpha-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Sprites-Mask.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Standard.shader
+assetType: Root
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/StandardSpecular.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TextCore-SDF-SSD.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TextCore-SDF.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VideoComposite.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VideoDecode.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VideoDecodeAndroid.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VideoDecodeOSX.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Cubemaps/CubeBlend.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Cubemaps/CubeBlur.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Cubemaps/CubeBlurOdd.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Cubemaps/CubeCopy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/GIDebug/ShowLightMask.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/GIDebug/TextureUV.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/GIDebug/UV1sAsPositions.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/GIDebug/VertexColors.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-Bumped.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-BumpSpec-1DirectionalLight.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-BumpSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-Diffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-Lightmap-Unlit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-Particle-Add.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-Particle-Alpha-VertexLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-Particle-Alpha.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-Particle-Multiply.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-Skybox.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-VertexLit-OnlyDirectionalLights.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Mobile/Mobile-VertexLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SpeedTree.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SpeedTreeBillboard.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SpeedTree8.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SpeedTreeBillboard.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/AlphaTest-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SoftOcclusion/TreeSoftOcclusionBark.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SoftOcclusion/TreeSoftOcclusionBarkRendertex.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SoftOcclusion/TreeSoftOcclusionBarkRendertex.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SoftOcclusion/TreeSoftOcclusionLeaves.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SoftOcclusion/TreeSoftOcclusionLeavesRendertex.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/SoftOcclusion/TreeSoftOcclusionLeavesRendertex.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorAlbedoRenderTex.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorBark.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorBarkOptimized.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorBarkOptimized.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorBarkRendertex.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorBarkRendertex.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorLeaves.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorLeavesOptimized.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorLeavesFast.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorLeavesFastOptimized.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorLeavesFastOptimized.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorLeavesRendertex.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorLeavesOptimized.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorLeavesRendertex.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorLeavesRendertex.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorNormalRendertex.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Details/VertexLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Details/WavingGrass.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Details/WavingGrassBillboard.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/AddPass.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/DiffuseBase.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Terrain-Utilities.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-VertexLit.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/DiffuseBaseGen.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/FirstPass.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 8
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/DiffuseBase.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Details/VertexLit.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/AddPass.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Details/WavingGrassBillboard.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Details/WavingGrass.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/DiffuseBaseGen.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Trees/BillboardTree.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Specular-AddPass.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/AddPass.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Specular-Base.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Glossy.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Terrain-Utilities.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Specular-FirstPass.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 3
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/FirstPass.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Specular-Base.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Specular-AddPass.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Standard-AddPass.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/AddPass.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Standard-Base.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Terrain-Utilities.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Standard-BaseGen.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Standard-FirstPass.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 4
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/FirstPass.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Standard-Base.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Standard-AddPass.shader
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Standard-BaseGen.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Terrain-Utilities.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Trees/BillboardTree.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Trees/CameraFacingBillboardTree.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Utils/BrushPreview.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Utils/CrossBlendNeighbors.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Utils/GenNormalmap.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Utils/PaintHeight.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Utils/TerrainHeightBlitCopy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Utils/TerrainLayerUtils.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-CompositeOverdraw.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Default.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-DefaultETC1.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-DefaultFont.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Default.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Lit-Bumped.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Lit-Transparent.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Lit-Detail.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Lit-Transparent.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Lit-Refraction.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Lit-Transparent.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Lit-RefractionDetail.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Lit-Detail.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Lit-Transparent.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Overdraw.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Unlit-Detail.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Unlit-Text.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-DefaultFont.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Unlit-TextDetail.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Unlit-Detail.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Unlit-Transparent.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/UI/UI-Default.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UIElements/EditorUIE.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UIElements/GraphViewUIE.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UIElements/Internal-UIRAtlasBlitCopy.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UIElements/Internal-UIRDefault.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/UIElements/Internal-UIRDefaultWorld.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Unlit/Unlit-Alpha.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Unlit/Unlit-AlphaTest.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Unlit/Unlit-Color.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/Unlit/Unlit-Normal.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VR/Shaders/BlitFromTex2DToTexArraySlice.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VR/Shaders/BlitTexArraySlice.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VR/Shaders/BlitTexArraySliceToDepth.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VR/Shaders/BlitTexArraySliceToDepth_MSAA.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VR/Shaders/Internal-VRDistortion.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VR/Shaders/SpatialMappingOcclusion.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/DefaultResourcesExtra/VR/Shaders/SpatialMappingWireframe.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Avatar/Materials/Avatar.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Avatar/Materials/Avatar_Transparent.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Avatar/Shaders/Editor-AlphaDiffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Avatar/Shaders/Editor-AlphaTestDiffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Avatar/Shaders/Editor-BumpSpec.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/EditorDefaultResources/Avatar/Shaders/Editor-Diffuse.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Avatar/Shaders/Editor-Diffuse.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Brushes/CreateBrush.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Editors/AnimationWindow/ControlPoint.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Editors/AnimationWindow/Curve.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/GraphView/AAEdge.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Inspectors/InactiveGUI.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Inspectors/Internal-GUITextureClipVertically.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Inspectors/TreeCreator/TreeTextureCombiner.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Physics/DebugVisSolid.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Physics/DebugVisSolidCapsule.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Physics/DebugVisWire.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Physics/DebugVisWireCapsule.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/MeshPreviewShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/Preview.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/Preview2DTextureArray.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/Preview3DBase.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/Preview3DSDF.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/Preview3DSliced.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/Preview3DVolume.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewAlpha.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewAlphaVT.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewAudioClipWaveform.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewColor2D.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewColor2DVT.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewCubemap.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewCubemapArray.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewEncodedLightmapDoubleLDR.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewEncodedLightmapFullHDR.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewEncodedLightmapRGBM.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewEncodedNormals.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewEncodedNormalsVT.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewPlaneWithShadow.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewShadowMask.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewShadowPlaneClip.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewTransparent.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Previews/PreviewTransparentVT.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Profiler/TimelineDetail.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/2DHandleDottedLinesShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/2DHandleLinesShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/AlphaBasedSelection.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/AlphaBasedSelectionNoZWrite.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/BoneHandles.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/CircularArc.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/ColoredTexture.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GizmoColorOcclusion.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GizmoIconPicking.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GizmoLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GizmoText.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GizmoTexture.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GizmoWire.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GizmoWireNoDepthTest.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GridGap.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GridOrthoShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GridShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GUITextureBlit2Linear.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GUITextureBlit2SRGB.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/GUITextureBlitSceneGUI.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/HandleDottedLinesShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/HandleIconShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/HandleLinesShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/HandlesLit.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/HandlesRenderShader.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/LightProbeGroupTetrahedra.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/LightProbeHandles.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/LightProbeLines.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/OpaqueSelection.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/ParticleShapeGizmo.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/ParticleShapeGizmoSphere.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewAlphaShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewApplyFilter.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewAura.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewBuildFilter.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewDeferredShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewGrayscaleEffectFade.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewSelected.cginc
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewSelected.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewShowLightmap.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewShowMips.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewShowOverdraw.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SceneViewShowTextureStreaming.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/SH.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/ShowOverlap.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/ShowShadowCascadeSplits.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/TerrainBrush.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/VertexSelectedShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/VertexSelectionBackfacesShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/VertexSelectionShader.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SceneView/Wireframe.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/Shaders/UIElements/AACurveField.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Shader/EditorDefaultResources/SplashScreen/SeparableBlur.shader
+assetType: NoPack
+bundleName: buildinshaders.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/BuildInAssetsTest.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_buildinassetstest.prefab.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Image/UISprite.png
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/Cylinder.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_cylinder.prefab.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Mesh/Cylinder.mesh
+Assets/BuildInAssets/Material/Default-Material.mat
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/Plane.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_plane.prefab.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Mesh/Plane.mesh
+Assets/BuildInAssets/Material/Default-Material.mat
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/Sphere.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_sphere.prefab.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Material/Default-Material.mat
+Assets/BuildInAssets/Mesh/Sphere.mesh
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/New Folder/Capsule.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_new_folder_capsule.prefab.ab
+dependNum: 2
+{
+Assets/BuildInAssets/Material/Default-Material.mat
+Assets/BuildInAssets/Mesh/Capsule.mesh
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Prefabs/New Folder/Cube.prefab
+assetType: Root
+bundleName: assets_scenes_prefabs_new_folder_cube.prefab.ab
+dependNum: 2
+{
+Assets/Scenes/Prefabs/Cylinder.prefab
+Assets/BuildInAssets/Mesh/Cube.mesh
+}
+-----------------------------------------------
+
+filePath: Assets/Scenes/Images/20220128124643.png
+assetType: NoPack
+bundleName: assets_scenes_images_20220128124643.png.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Image/UISprite.png
+assetType: Asset
+bundleName: assets_scenes_prefabs_buildinassetstest.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Cylinder.mesh
+assetType: Merge
+bundleName: assets_scenes_prefabs_cylinder.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Material/Default-Material.mat
+assetType: StandAlone
+bundleName: assets_buildinassets_material_default-material.mat.ab
+dependNum: 1
+{
+Assets/BuildInAssets/Shader/DefaultResourcesExtra/Standard.shader
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Plane.mesh
+assetType: Asset
+bundleName: assets_scenes_prefabs_plane.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Sphere.mesh
+assetType: Asset
+bundleName: assets_scenes_prefabs_sphere.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Capsule.mesh
+assetType: Asset
+bundleName: assets_scenes_prefabs_new_folder_capsule.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/BuildInAssets/Mesh/Cube.mesh
+assetType: Asset
+bundleName: assets_scenes_prefabs_new_folder_cube.prefab.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
+filePath: Assets/AssetConfig.bytes
+assetType: Root
+bundleName: assets_assetconfig.bytes.ab
+dependNum: 0
+{
+}
+-----------------------------------------------
+
