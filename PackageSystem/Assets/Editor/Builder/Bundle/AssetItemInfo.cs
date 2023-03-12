@@ -37,6 +37,9 @@ public class AssetItemInfo
     //没有引用时是否不打包
     public bool noPackIfNoRef = true;
 
+    //是否确定打包 主要针对noPackIfNoRef的Root类资源
+    public bool certainlyPack = false;
+
     public bool alreadyAnalyzed = false;
 
     public override int GetHashCode()
@@ -61,6 +64,7 @@ public class AssetItemInfo
         this.analyzeDependency = true;
         this.mergeIfOneRef = true;
         this.noPackIfNoRef = true;
+        this.certainlyPack = false;
 
         this.alreadyAnalyzed = false;
     }
@@ -72,7 +76,9 @@ public class AssetItemInfo
     {
         get
         {
-            return (assetType != AssetType.Asset) && (assetType != AssetType.NoPack) &&
+            return certainlyPack &&
+                (assetType != AssetType.Asset) && 
+                (assetType != AssetType.NoPack) &&
                 (assetType != AssetType.RootImpMerge);
         }
     }
@@ -84,7 +90,8 @@ public class AssetItemInfo
     {
         get
         {
-            return assetType == AssetType.Root || assetType == AssetType.StandAlone;
+            return certainlyPack &&
+                (assetType == AssetType.Root || assetType == AssetType.StandAlone);
         }
     }
 
@@ -212,7 +219,7 @@ public class AssetItemInfo
         {
             case AssetType.StandAlone:
             case AssetType.Root:
-                if(!rootSet.Contains(this))
+                if(this.certainlyPack && !rootSet.Contains(this))
                 {
                     rootSet.Add(this);
                 }
@@ -235,9 +242,10 @@ public class AssetItemInfo
         if(this.noPackIfNoRef && this.RefParentSet.Count == 0)
         {
             //Asset类型的资源必然有一个Root引用,只可能是NoPackIfNoRef的root资源才有可能没有引用走到这里
+            //没有任何父节点 直接判定为无需打包
             this.assetType = AssetType.NoPack;
         }
-        else if(this.mergeIfOneRef)
+        else
         {
             //先统计好依赖我的资源的类型 因为assetType是根据依赖我的资源，也就是前置节点来决定的，最终追溯到Root或StandAlone节点
             foreach(var parent in RefParentSet)
@@ -249,47 +257,67 @@ public class AssetItemInfo
             {
                 parent.CollectRoot(rootSet);
             }
-            if(rootSet.Count > 1)
+            if(rootSet.Count == 0)
             {
-                //被需要独立打包的资源(Root或StandAlone)依赖数量超过1个
-                if(this.assetType == AssetType.Asset)
+                if(this.noPackIfNoRef)
                 {
-                    this.assetType = AssetType.StandAlone;
-                    this.bundleName = AssetBundleBuildUtils.ToBundleName(this.filePath);
+                    this.assetType = AssetType.NoPack;
                 }
             }
-            else if(rootSet.Count == 1)
+            else
             {
-                var itr = rootSet.GetEnumerator();
-                itr.MoveNext();
-                var parent = itr.Current;
-                //虽然不必显式合并打包，但是也给设置一个bundleName，方便查看它被自动合到哪个Bundle里了
-                this.bundleName = parent.bundleName;
-                //parent为standAlone或Root节点，若父节点个数大于0 则说明至少存在2个Root，需要显式合并
-                if(parent.RefParentSet.Count > 0)
+                //存在来自确定打包的Root资源的引用 改状态为确定打包
+                if(!this.certainlyPack)
                 {
-                    if(this.assetType == AssetType.Root)
+                    this.certainlyPack = true;
+                }
+                
+                if(rootSet.Count > 1)
+                {
+                    //被需要独立打包的资源(Root或StandAlone)依赖数量超过1个
+                    if(this.assetType == AssetType.Asset)
                     {
-                        this.assetType = AssetType.RootMerge;
-                    }
-                    else if(this.assetType == AssetType.Asset)
-                    {
-                        this.assetType = AssetType.Merge;
+                        this.assetType = AssetType.StandAlone;
+                        this.bundleName = AssetBundleBuildUtils.ToBundleName(this.filePath);
                     }
                 }
                 else
                 {
-                    if(this.assetType == AssetType.Root)
+                    if(this.mergeIfOneRef || this.assetType == AssetType.Asset)
                     {
-                        //只有一个依赖的Root MergeIfOneRef资源，则隐式合并打包
-                        this.assetType = AssetType.RootImpMerge;
-                    }
-                    else if(this.assetType == AssetType.Asset)
-                    {
-                        //Asset资源本身就是隐式合并打包，不需要处理
+                        var itr = rootSet.GetEnumerator();
+                        itr.MoveNext();
+                        var parent = itr.Current;
+                        //虽然不必显式合并打包，但是也给设置一个bundleName，方便查看它被自动合到哪个Bundle里了
+                        this.bundleName = parent.bundleName;
+                        //parent为standAlone或Root节点，若父节点个数大于0 则说明至少存在2个Root，需要显式合并
+                        if(parent.RefParentSet.Count > 0)
+                        {
+                            if(this.assetType == AssetType.Root)
+                            {
+                                this.assetType = AssetType.RootMerge;
+                            }
+                            else if(this.assetType == AssetType.Asset)
+                            {
+                                this.assetType = AssetType.Merge;
+                            }
+                        }
+                        else
+                        {
+                            if(this.assetType == AssetType.Root)
+                            {
+                                //只有一个依赖的Root MergeIfOneRef资源，则隐式合并打包
+                                this.assetType = AssetType.RootImpMerge;
+                            }
+                            else if(this.assetType == AssetType.Asset)
+                            {
+                                //Asset资源本身就是隐式合并打包，不需要处理
+                            }
+                        }
                     }
                 }
             }
+            
         }
     }
 
@@ -347,6 +375,7 @@ public class AssetItemInfo
                     refItem.analyzeDependency = true;
                     refItem.mergeIfOneRef = true;
                     refItem.noPackIfNoRef = true;
+                    refItem.certainlyPack = false;
                 }
                 this.AddRefChildAsset(refItem);
                 refItem.AnalyzeDependencies();

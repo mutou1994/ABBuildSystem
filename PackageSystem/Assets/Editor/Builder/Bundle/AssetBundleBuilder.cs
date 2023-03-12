@@ -333,6 +333,7 @@ public class AssetBundleBuilder
         assetItem.analyzeDependency = analyzeDps;
         assetItem.noPackIfNoRef = noPackIfNoRef;
         assetItem.mergeIfOneRef = mergeIfOneRef;
+        assetItem.certainlyPack = !noPackIfNoRef;
         /*if(isNew && analyzeDps)
         {
             AnalyzeDependenciesNode(assetItem);

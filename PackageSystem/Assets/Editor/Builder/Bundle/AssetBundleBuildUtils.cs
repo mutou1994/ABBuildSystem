@@ -220,6 +220,7 @@ public class AssetBundleBuildUtils
         assetItem.analyzeDependency = false;
         assetItem.noPackIfNoRef = false;
         assetItem.mergeIfOneRef = false;
+        assetItem.certainlyPack = true;
         AllBundleInfos.Add(assetItem.bundleName, new BundleItemInfo(assetItem.bundleName));
     }
 
