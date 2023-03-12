@@ -66,6 +66,7 @@
     <Compile Include="Assets\Editor\Builder\Patch\PatchInfos.cs" />
     <Compile Include="Assets\Editor\Builder\Patch\PatchBuildUtils.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\BundleItemInfo.cs" />
+    <Compile Include="Assets\Editor\Builder\Bundle\BuildInAssetsProccesser.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\AssetBuildInfos.cs" />
     <Compile Include="Assets\Editor\Builder\Bundle\AssetItemInfo.cs" />
     <Compile Include="Assets\Editor\Md5Tool.cs" />

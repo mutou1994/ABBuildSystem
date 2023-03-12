@@ -5,6 +5,7 @@ using UnityEditor;
 using System.IO;
 using System;
 using System.Text;
+using System.Linq;
 
 public class AssetBundleBuildUtils
 {
@@ -47,7 +48,12 @@ public class AssetBundleBuildUtils
 
     public static List<AssetItemInfo> GetAllAssets()
     {
-        return new List<AssetItemInfo>(AllAssetInfos.Values);
+        return AllAssetInfos.Values.ToList();
+    }
+
+    public static List<UnityEngine.Object> GetAllAssetObjects()
+    {
+        return AllAssetInfos.Select(o => o.Value.asset).ToList();
     }
 
     public static string[] GetRefBundles(string bundleName)

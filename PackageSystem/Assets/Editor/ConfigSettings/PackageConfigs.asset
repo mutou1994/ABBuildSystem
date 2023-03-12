@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: PackageConfigs
   m_EditorClassIdentifier: 
   assetConfigs:
+  - groupName: buildinshaders
+    exportType: 0
+    assetInfos:
+    - asset: {fileID: 102900000, guid: 45f63dcb0f3abe249816d5e7591ec343, type: 3}
+      searchPattern: '*.*'
+      mergeIfOneRef: 0
+      noPackIfNoRef: 1
   - groupName: 
     exportType: 1
     assetInfos:

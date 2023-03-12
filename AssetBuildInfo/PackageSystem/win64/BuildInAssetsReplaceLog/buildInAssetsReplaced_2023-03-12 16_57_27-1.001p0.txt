@@ -1,0 +1,191 @@
+<<<<<<<<<<BuildInAssetts Replaced Fail>>>>>>>>>>
+Total Num:0
+
+--------------------------------------------------------------------
+<<<<<<<<<<BuildInAssetts Replaced Success>>>>>>>>>>
+Total Num:21
+
+Assets/BuildInAssets/Material/Default-Diffuse.mat
+[
+    Legacy Shaders/Diffuse (UnityEngine.Shader)  ===>>>  Legacy Shaders/Diffuse (UnityEngine.Shader)
+    Legacy Shaders/Diffuse  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/Normal-Diffuse.shader
+    {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 4915d0bc2d34b364cafca57321d2a84e, type: 3}
+]
+
+Assets/BuildInAssets/Material/Default-Line.mat
+[
+    Legacy Shaders/Particles/Alpha Blended Premultiply (UnityEngine.Shader)  ===>>>  Legacy Shaders/Particles/Alpha Blended Premultiply (UnityEngine.Shader)
+    Legacy Shaders/Particles/Alpha Blended Premultiply  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Premultiply Blend.shader
+    {fileID: 207, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 3d57a137ef9092c4bb39813e9cb6a8d7, type: 3}
+]
+
+Assets/BuildInAssets/Material/Default-Material.mat
+[
+    Standard (UnityEngine.Shader)  ===>>>  Standard (UnityEngine.Shader)
+    Standard  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/Standard.shader
+    {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 5722ceee5d2df1d428b2e927c97d684d, type: 3}
+]
+
+Assets/BuildInAssets/Material/Default-Particle.mat
+[
+    Legacy Shaders/Particles/Alpha Blended Premultiply (UnityEngine.Shader)  ===>>>  Legacy Shaders/Particles/Alpha Blended Premultiply (UnityEngine.Shader)
+    Legacy Shaders/Particles/Alpha Blended Premultiply  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Premultiply Blend.shader
+    {fileID: 207, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 3d57a137ef9092c4bb39813e9cb6a8d7, type: 3}
+
+    Default-Particle (UnityEngine.Texture2D)  ===>>>  Default-Particle (UnityEngine.Texture2D)
+    Default-Particle  ===>>>  Assets/BuildInAssets/Texture/Default-Particle.png
+    {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 2800000, guid: e9a9e3e6019d8774c9a93c13703bd6ad, type: 3}
+]
+
+Assets/BuildInAssets/Material/Default-ParticleSystem.mat
+[
+    Particles/Standard Unlit (UnityEngine.Shader)  ===>>>  Particles/Standard Unlit (UnityEngine.Shader)
+    Particles/Standard Unlit  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/Particle Standard Unlit.shader
+    {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: f8e96e9e0eb15194f95c98ad751ed09b, type: 3}
+
+    Default-ParticleSystem (UnityEngine.Texture2D)  ===>>>  Default-ParticleSystem (UnityEngine.Texture2D)
+    Default-ParticleSystem  ===>>>  Assets/BuildInAssets/Texture/Default-ParticleSystem.png
+    {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 2800000, guid: 4aaf244e9087bce40b0c661f12e6a78e, type: 3}
+]
+
+Assets/BuildInAssets/Material/Default-Skybox.mat
+[
+    Skybox/Procedural (UnityEngine.Shader)  ===>>>  Skybox/Procedural (UnityEngine.Shader)
+    Skybox/Procedural  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/Skybox-Procedural.shader
+    {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 40558203c1a7d5a47bc559b830c22ce9, type: 3}
+]
+
+Assets/BuildInAssets/Material/Default-Terrain-Diffuse.mat
+[
+    Nature/Terrain/Diffuse (UnityEngine.Shader)  ===>>>  Nature/Terrain/Diffuse (UnityEngine.Shader)
+    Nature/Terrain/Diffuse  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/FirstPass.shader
+    {fileID: 10505, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 41ceacf1eb2bb7d4c91fc66d3d744055, type: 3}
+]
+
+Assets/BuildInAssets/Material/Default-Terrain-Specular.mat
+[
+    Nature/Terrain/Specular (UnityEngine.Shader)  ===>>>  Nature/Terrain/Specular (UnityEngine.Shader)
+    Nature/Terrain/Specular  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Specular-FirstPass.shader
+    {fileID: 10620, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 267f9b532365eb341b5c3afe1bdd2977, type: 3}
+]
+
+Assets/BuildInAssets/Material/Default-Terrain-Standard.mat
+[
+    Nature/Terrain/Standard (UnityEngine.Shader)  ===>>>  Nature/Terrain/Standard (UnityEngine.Shader)
+    Nature/Terrain/Standard  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/TerrainShaders/Splats/Standard-FirstPass.shader
+    {fileID: 10623, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 297ac2189c0c3be4aa0a90d981df6a73, type: 3}
+]
+
+Assets/BuildInAssets/Material/Font Material.mat
+[
+    GUI/Text Shader (UnityEngine.Shader)  ===>>>  GUI/Text Shader (UnityEngine.Shader)
+    GUI/Text Shader  ===>>>  Assets/BuildInAssets/Shader/DefaultResources/Font.shader
+    {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 82ab82bee2ac21c4c9f75561226a77f3, type: 3}
+
+    Font Texture (UnityEngine.Texture2D)  ===>>>  Font Texture (UnityEngine.Texture2D)
+    Font Texture  ===>>>  Assets/BuildInAssets/Texture/Font Texture.png
+    {fileID: 10103, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 2800000, guid: 6755495ae528c3f4185091260d5730dc, type: 3}
+]
+
+Assets/BuildInAssets/Material/FrameDebuggerRenderTargetDisplay.mat
+[
+    Hidden/FrameDebuggerRenderTargetDisplay (UnityEngine.Shader)  ===>>>  Hidden/FrameDebuggerRenderTargetDisplay (UnityEngine.Shader)
+    Hidden/FrameDebuggerRenderTargetDisplay  ===>>>  Assets/BuildInAssets/Shader/DefaultResources/PerformanceTools/FrameDebuggerRenderTargetDisplay.shader
+    {fileID: 10755, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: e426db2b8c8297f4bb86a74a81eaad7b, type: 3}
+]
+
+Assets/BuildInAssets/Material/SpatialMappingOcclusion.mat
+[
+    VR/SpatialMapping/Occlusion (UnityEngine.Shader)  ===>>>  VR/SpatialMapping/Occlusion (UnityEngine.Shader)
+    VR/SpatialMapping/Occlusion  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/VR/Shaders/SpatialMappingOcclusion.shader
+    {fileID: 15300, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 93ceab7623a797142b122736266ee804, type: 3}
+]
+
+Assets/BuildInAssets/Material/SpatialMappingWireframe.mat
+[
+    VR/SpatialMapping/Wireframe (UnityEngine.Shader)  ===>>>  VR/SpatialMapping/Wireframe (UnityEngine.Shader)
+    VR/SpatialMapping/Wireframe  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/VR/Shaders/SpatialMappingWireframe.shader
+    {fileID: 15301, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 0c0805a8b24ef964eac7feb773cb697e, type: 3}
+]
+
+Assets/BuildInAssets/Material/Sprites-Default.mat
+[
+    Sprites/Default (UnityEngine.Shader)  ===>>>  Sprites/Default (UnityEngine.Shader)
+    Sprites/Default  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/Sprites-Default.shader
+    {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: be50803851abcb24ea42b4f6d25845b0, type: 3}
+]
+
+Assets/BuildInAssets/Material/Sprites-Mask.mat
+[
+    Sprites/Mask (UnityEngine.Shader)  ===>>>  Sprites/Mask (UnityEngine.Shader)
+    Sprites/Mask  ===>>>  Assets/BuildInAssets/Shader/DefaultResourcesExtra/Sprites-Mask.shader
+    {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 4800000, guid: 930e01f414bc7f44f94722c1619d14fe, type: 3}
+]
+
+Assets/Scenes/Prefabs/BuildInAssetsTest.prefab
+[
+    UISprite (UnityEngine.Sprite)  ===>>>  UISprite (UnityEngine.Sprite)
+    UISprite  ===>>>  Assets/BuildInAssets/Image/UISprite.png
+    {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 21300000, guid: 9f2c791d046483d4d89041c8a6576016, type: 3}
+]
+
+Assets/Scenes/Prefabs/Cylinder.prefab
+[
+    Cylinder (UnityEngine.Mesh)  ===>>>  Cylinder (UnityEngine.Mesh)
+    Cylinder  ===>>>  Assets/BuildInAssets/Mesh/Cylinder.mesh
+    {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: 657ba82216162854e89e4177e0ac39ee, type: 3}
+
+    Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
+    Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
+    {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 2100000, guid: c7dffda277c8f60429829f8a524ba412, type: 2}
+]
+
+Assets/Scenes/Prefabs/Plane.prefab
+[
+    Plane (UnityEngine.Mesh)  ===>>>  Plane (UnityEngine.Mesh)
+    Plane  ===>>>  Assets/BuildInAssets/Mesh/Plane.mesh
+    {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: cbe138cde4b757c40b841b1ba49bcc4b, type: 3}
+
+    Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
+    Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
+    {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 2100000, guid: c7dffda277c8f60429829f8a524ba412, type: 2}
+]
+
+Assets/Scenes/Prefabs/Sphere.prefab
+[
+    Sphere (UnityEngine.Mesh)  ===>>>  Sphere (UnityEngine.Mesh)
+    Sphere  ===>>>  Assets/BuildInAssets/Mesh/Sphere.mesh
+    {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: ba96a718c298cee4d9024992c85ba139, type: 3}
+
+    Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
+    Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
+    {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 2100000, guid: c7dffda277c8f60429829f8a524ba412, type: 2}
+]
+
+Assets/Scenes/Prefabs/New Folder/Capsule.prefab
+[
+    Capsule (UnityEngine.Mesh)  ===>>>  Capsule (UnityEngine.Mesh)
+    Capsule  ===>>>  Assets/BuildInAssets/Mesh/Capsule.mesh
+    {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: 618bc9b53a3472e4cabaa34dfba7fc15, type: 3}
+
+    Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
+    Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
+    {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 2100000, guid: c7dffda277c8f60429829f8a524ba412, type: 2}
+]
+
+Assets/Scenes/Prefabs/New Folder/Cube.prefab
+[
+    Cube (UnityEngine.Mesh)  ===>>>  Cube (UnityEngine.Mesh)
+    Cube  ===>>>  Assets/BuildInAssets/Mesh/Cube.mesh
+    {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}  ===>>>  {fileID: 4300000, guid: bd9bc39cab8bb2648be7066bd1e3df2f, type: 3}
+
+    Default-Material (UnityEngine.Material)  ===>>>  Default-Material (UnityEngine.Material)
+    Default-Material  ===>>>  Assets/BuildInAssets/Material/Default-Material.mat
+    {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}  ===>>>  {fileID: 2100000, guid: c7dffda277c8f60429829f8a524ba412, type: 2}
+]
+
+--------------------------------------------------------------------
+<<<<<<<<<<BuildInAssetts Reverted Success>>>>>>>>>>
+Total Num:0
+
+--------------------------------------------------------------------

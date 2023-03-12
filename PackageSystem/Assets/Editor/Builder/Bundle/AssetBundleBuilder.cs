@@ -41,9 +41,13 @@ public class AssetBundleBuilder
         AssetBundleBuildUtils.Clear();
         AssetBuildInfoUtils.Clear();
         BuildSetting.Instance.Clear();
+        BuildInAssetsProccesser.CopyBuildInAssetsToEditor();
         time = DateTime.Now;
         MakeABSetting();
         BuildLogger.LogInfo("MakeABSetting cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
+        time = DateTime.Now;
+        ReplaceBuildInAssetsReference();
+        BuildLogger.LogInfo("ReplaceBuildInAssetsReference cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
         time = DateTime.Now;
         Analyze();
         BuildLogger.LogInfo("Analyze cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
@@ -68,6 +72,9 @@ public class AssetBundleBuilder
             BuildLogger.LogInfo("RemoveUnUsedAB cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
         }
         BuildLogger.LogInfo("ExportAB cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
+        time = DateTime.Now;
+        RevertBuildInAssetsReference();
+        BuildLogger.LogInfo("RevertBuildInAssetsReference cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
         time = DateTime.Now;
         AssetBuildInfoUtils.UpdateGameVersion(false);
         AssetDatabase.SaveAssets();
@@ -164,12 +171,13 @@ public class AssetBundleBuilder
         else
         {
             BuildLogger.LogInfo("Read ParseBuildInfo success!!! cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
-            time = DateTime.Now;
-            //SpriteConfigs.GenerateSpriteConfig();
-            //BuildLogger.LogInfo("GenerateSpriteConfig cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
+            BuildInAssetsProccesser.CopyBuildInAssetsToEditor();
             time = DateTime.Now;
             MakeABSetting();
             BuildLogger.LogInfo("MakeABSetting cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
+            time = DateTime.Now;
+            ReplaceBuildInAssetsReference();
+            BuildLogger.LogInfo("ReplaceBuildInAssetsReference cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
             time = DateTime.Now;
             Analyze();
             BuildLogger.LogInfo("Analyze cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
@@ -189,6 +197,9 @@ public class AssetBundleBuilder
                 RemoveUnUsedAB();
                 BuildLogger.LogInfo("RemoveUnUsedAB cost time : {0}s", (int)(DateTime.Now - time).TotalSeconds);
                 BuildLogger.LogInfo("ExportAB cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
+                time = DateTime.Now;
+                RevertBuildInAssetsReference();
+                BuildLogger.LogInfo("RevertBuildInAssetsReference cost time: {0}s", (int)(DateTime.Now - time).TotalSeconds);
                 time = DateTime.Now;
                 AssetBuildInfoUtils.UpdateGameVersion(true);
                 PatchBuildUtils.GeneratePatchs();
@@ -266,6 +277,65 @@ public class AssetBundleBuilder
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
         return manifest;
+    }
+
+    public static List<UnityEngine.Object> GetWillPackageAssets()
+    {
+        if(!PackageConfigs.Instance)
+        {
+            Debug.LogError("Create PackageConfig First!!!!");
+            return null;
+        }
+        HashSet<string> map = new HashSet<string>();
+        List<UnityEngine.Object> list = new List<UnityEngine.Object>();
+        var groups = PackageConfigs.Instance.assetConfigs;
+        string assetPath = string.Empty;
+        foreach(var group in groups)
+        {
+            foreach(var assetInfo in group.assetInfos)
+            {
+                assetPath = AssetDatabase.GetAssetPath(assetInfo.asset);
+                //ÊÇÄ¿Â¼
+                if(Directory.Exists(assetPath))
+                {
+                    if (assetPath.Contains(".svn")) continue;
+                    string[] patterns = string.IsNullOrEmpty(assetInfo.searchPattern) ? AnyPatterns : assetInfo.searchPattern.Split('|');
+                    foreach(var pattern in patterns)
+                    {
+                        var files = Directory.GetFiles(assetPath, pattern, SearchOption.AllDirectories);
+                        foreach(var file in files)
+                        {
+                            if (file.EndsWith(".meta") || file.Contains(".svn") || file.EndsWith(".bat") || file.EndsWith(".ds_store")) continue;
+                            string filePath = file.Replace("\\", "/");
+                            if(map.Add(filePath))
+                            {
+                                list.Add(AssetDatabase.LoadMainAssetAtPath(filePath));
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    list.Add(assetInfo.asset);
+                }
+            }
+        }
+        map.Clear();
+        return list;
+    }
+
+    public static void ReplaceBuildInAssetsReference()
+    {
+        var all = AssetBundleBuildUtils.GetAllAssetObjects();
+        BuildInAssetsProccesser.ReplaceBuildInAssetsReference(all);
+    }
+
+    public static void RevertBuildInAssetsReference()
+    {
+        var all = AssetBundleBuildUtils.GetAllAssetObjects();
+        BuildInAssetsProccesser.RevertBuildInAssetsReference(all);
+        BuildInAssetsProccesser.SaveLogToFile();
+        BuildInAssetsProccesser.Clear();
     }
 
     public static void MakeABSetting()
