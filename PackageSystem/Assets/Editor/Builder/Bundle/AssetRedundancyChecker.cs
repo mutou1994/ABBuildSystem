@@ -10,12 +10,16 @@ public class AssetRedundancyChecker
 {
     struct RedundancyInfo
     {
-        public string bundleName;
         public string refedAsset;
         public string redundancyAsset;
     }
 
     static string ABPath = AssetBundleBuildUtils.BundleSavePath;
+
+    /// <summary>
+    /// 隐式打包冗余的资源数量
+    /// </summary>
+    static int impInMultiABNum = 0;
 
     /// <summary>
     /// 所有显式打包的资源与AB的映射
@@ -25,7 +29,28 @@ public class AssetRedundancyChecker
     /// <summary>
     /// 所有被隐式打包的资源与AB的映射 若对应的AB数量超过1个，则表明该资源被多次打进不同的AB里，存在冗余
     /// </summary>
-    static Dictionary<string, List<RedundancyInfo>> assetImpRefInAB = new Dictionary<string, List<RedundancyInfo>>();
+    /// redundancyAssetName
+    /// {
+    ///     bundleName
+    ///     [
+    ///         refedAsset1,
+    ///         refedAsset2,
+    ///         ...
+    ///     ]
+    ///     
+    ///     buundleName
+    ///     [
+    ///         ...
+    ///     ]
+    ///     
+    ///     ...
+    /// }
+    static Dictionary<string, Dictionary<string, List<string>>> assetImpRefInAB = new Dictionary<string, Dictionary<string, List<string>>>();
+
+    /// <summary>
+    /// 显式打到多个AB里的资源 显式打包冗余 属于打包错误
+    /// </summary>
+    static Dictionary<string, List<string>> assetInMultiAB = new Dictionary<string, List<string>>();
 
     public static string RedundancyInfoPath
     {
@@ -44,9 +69,11 @@ public class AssetRedundancyChecker
     [MenuItem("ABTools / 检查AB冗余")]
     public static void CheckBundleRedundancy()
     {
+        impInMultiABNum = 0;
         Clear();
         InitAllAsset2ABMap();
         AnalyzeRedundancy();
+        SaveToFile();
         Clear();
     }
 
@@ -54,6 +81,7 @@ public class AssetRedundancyChecker
     {
         allAsset2ABMap.Clear();
         assetImpRefInAB.Clear();
+        assetInMultiAB.Clear();
     }
 
     static void InitAllAsset2ABMap()
@@ -69,11 +97,39 @@ public class AssetRedundancyChecker
             string bundleName = Path.GetFileName(abFile);
             foreach (string asset in ab.GetAllAssetNames())
             {
-                allAsset2ABMap.Add(asset.ToLower(), bundleName);
+                string assetPath = asset.ToLower();
+                if(!allAsset2ABMap.ContainsKey(assetPath))
+                {
+                    allAsset2ABMap.Add(assetPath, bundleName);
+                }
+                else
+                {
+                    Debug.LogError("RedundancyChecker, asset In MultiAB:" + assetPath + " BundleName:" + bundleName);
+                    BuildLogger.LogError("RedundancyChecker, asset In MultiAB:{0} ABName:{1}", assetPath, bundleName);
+                    if (!assetInMultiAB.ContainsKey(assetPath))
+                    {
+                        assetInMultiAB.Add(assetPath, new List<string>());
+                    }
+                    assetInMultiAB[assetPath].Add(bundleName);
+                }
             }
             foreach(string asset in ab.GetAllScenePaths())
             {
-                allAsset2ABMap.Add(asset.ToLower(), bundleName);
+                string assetPath = asset.ToLower();
+                if(!allAsset2ABMap.ContainsKey(assetPath))
+                {
+                    allAsset2ABMap.Add(assetPath, bundleName);
+                }
+                else
+                {
+                    Debug.LogError("RedundancyChecker, asset In MultiAB:" + assetPath + " ABName:" + bundleName);
+                    BuildLogger.LogError("RedundancyChecker, asset In MultiAB:{0} ABName:{1}", assetPath, bundleName);
+                    if(!assetInMultiAB.ContainsKey(assetPath))
+                    {
+                        assetInMultiAB.Add(assetPath, new List<string>());
+                    }
+                    assetInMultiAB[assetPath].Add(bundleName);
+                }
             }
             ab.Unload(true);
             index++;
@@ -84,20 +140,20 @@ public class AssetRedundancyChecker
 
     static void AnalyzeRedundancy()
     {
-        int totalCount = 0;
+        impInMultiABNum = 0;
         int index = 0;
         int count = allAsset2ABMap.Count;
         EditorUtility.DisplayProgressBar("AnalyzeRedundancy", "start", 0);
-        HashSet<string> cache = new HashSet<string>();
-        foreach(var pair in allAsset2ABMap)
+        //HashSet<string> cache = new HashSet<string>();
+        foreach (var pair in allAsset2ABMap)
         {
             string assetPath = pair.Key;
             string bundleName = pair.Value;
 
             var asset = AssetDatabase.LoadMainAssetAtPath(assetPath);
-            string file;
+            string filePath;
             var dps = EditorUtility.CollectDependencies(new UnityEngine.Object[] { asset });
-            cache.Clear();
+            //cache.Clear();
             if (dps != null && dps.Length > 0)
             {
                 foreach (var dpAsset in dps)
@@ -107,51 +163,94 @@ public class AssetRedundancyChecker
                     //图集相关依赖，由于取的式本地资源的依赖，所以取到了本地图集，打包的时候实际会指向图集对应的AB包，所以此处可忽略
                     if (dpAsset.name.StartsWith("SpriteAtlasTexture-"))
                         continue;
-                    file = AssetDatabase.GetAssetPath(dpAsset);
-                    file = file.Replace("\\", "/");
-                    if (string.IsNullOrEmpty(file))
-                        file = dpAsset.name;
-                    file = file.ToLower();
-                    if (cache.Add(file))
+                    filePath = AssetDatabase.GetAssetPath(dpAsset);
+                    if (string.IsNullOrEmpty(filePath))
+                        filePath = dpAsset.name;
+                    filePath = filePath.Replace("\\", "/");
+                    filePath = filePath.ToLower();
+                    if (filePath.Contains("library/unity default resources") || filePath.Contains("resources/unity_builtin_extra"))
                     {
-                        if (!allAsset2ABMap.ContainsKey(file))
+                        filePath = filePath + "/" + dpAsset.name;
+                    }
+                    //if (cache.Add(file))
+                    //{
+                    if (!allAsset2ABMap.ContainsKey(filePath))
+                    {
+                        if (!assetImpRefInAB.ContainsKey(filePath))
                         {
-                            if (!assetImpRefInAB.ContainsKey(file))
+                            assetImpRefInAB.Add(filePath, new Dictionary<string, List<string>>());
+                        }
+                        if (!assetImpRefInAB[filePath].ContainsKey(bundleName))
+                        {
+                            assetImpRefInAB[filePath].Add(bundleName, new List<string>());
+                            if (assetImpRefInAB[filePath].Count == 2)
                             {
-                                assetImpRefInAB.Add(file, new List<RedundancyInfo>());
-                            }
-                            assetImpRefInAB[file].Add(new RedundancyInfo { bundleName = bundleName, refedAsset = assetPath, redundancyAsset = dpAsset.name });
-                            if (assetImpRefInAB[file].Count == 2)
-                            {
-                                totalCount++;
+                                impInMultiABNum++;
                             }
                         }
+                        assetImpRefInAB[filePath][bundleName].Add(assetPath);
                     }
+                    //}
                 }
             }
             EditorUtility.DisplayProgressBar("AnalyzeRedundancy", assetPath, (float)index / (float)count);
         }
         EditorUtility.ClearProgressBar();
+    }
+    
+    static void SaveToFile()
+    { 
         StringBuilder sb = new StringBuilder();
         sb.AppendLine("<<<<<<Bundle RedundancyInfos>>>>>>>");
-        sb.AppendFormat("<<<<<<Redundancy Num:{0}>>>>>>\n", totalCount);
+        sb.AppendFormat("<<<<<<Redundancy Num:{0}>>>>>>\n", impInMultiABNum + assetInMultiAB.Count);
         sb.AppendLine();
+
+        sb.AppendFormat("<<<<<<<<AssetInMultiABObvious Num:{0}>>>>>>>>\n", assetInMultiAB.Count);
+        foreach(var pair in assetInMultiAB)
+        {
+            var redundancyAssetPath = pair.Key;
+            var obviousABs = pair.Value;
+
+            if(obviousABs.Count > 1)
+            {
+                sb.AppendFormat("redundancyAssetPath:{0}\n", redundancyAssetPath);
+                sb.AppendFormat("obvious AB Num:{0}\n", obviousABs.Count.ToString());
+                sb.AppendLine("{");
+                foreach(var abName in obviousABs)
+                {
+                    sb.AppendFormat("    BundleName:{0}\n", abName);
+                }
+                sb.AppendLine("}");
+                sb.AppendLine("-------------------------------------------------------\n");
+            }
+        }
+
+        sb.AppendLine();
+        sb.AppendLine();
+        sb.AppendFormat("<<<<<<<AssetInMultiABImplicit Num:{0}>>>>>>>>\n", impInMultiABNum);
         foreach(var pair in assetImpRefInAB)
         {
-            var file = pair.Key;
+            var redundancyAssetPath = pair.Key;
             var redundancyInfos = pair.Value;
 
             if(redundancyInfos.Count > 1)
             {
-                sb.AppendFormat("redundancyAssetPath: {0}\n", file);
+                sb.AppendFormat("redundancyAssetPath: {0}\n", redundancyAssetPath);
                 sb.AppendFormat("refed AB Num: {0}\n", redundancyInfos.Count.ToString());
                 sb.AppendLine("{");
-                sb.AppendLine();
-                foreach(var info in redundancyInfos)
+                foreach(var redundancyInfo in redundancyInfos)
                 {
-                    sb.AppendFormat("BundleName:{0}\n", info.bundleName);
-                    sb.AppendFormat("Refed By{0}\n", info.refedAsset);
-                    sb.AppendFormat("redundancyAsset:{0}\n", info.redundancyAsset);
+                    var abName = redundancyInfo.Key;
+                    var refedAssets = redundancyInfo.Value;
+
+                    sb.AppendFormat("    BundleName:{0}\n", abName);
+                    sb.AppendFormat("    RefedAsset Num:{0}\n", refedAssets.Count.ToString());
+                    sb.AppendLine("    [");
+                    for(int i = 0; i < refedAssets.Count; i++)
+                    {
+                        sb.AppendFormat("        {0}\n", refedAssets[i]);
+                    }
+                    sb.AppendLine("    ]");
                     sb.AppendLine();
                 }
                 sb.AppendLine("}");
