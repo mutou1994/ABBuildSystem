@@ -1,12 +1,15 @@
 # 一个可自动分析依赖关系的无冗余打包工具
 ### 关于内建资源的冗余处理
 顶部编辑器工具菜单：
+
 ![Alt text](./1678616236881.png)
+
 1.CreateBuildInAssetsToEditor :  提取内置资源到编辑器目录Assets/BuildInAssets下，Shader部分需要自行去Unity官网下载对应版本。
 2.CopyBuildInAssetsToEditor : 从Assets/../BuildInAssets目录，将之前提取出来的内置资源拷贝回Assets/BuildInAssets目录。
 3.ClearLocalBuildInAssets : 删除Assets/BuildInAssets目录下的内建资源。
 4.ReplaceBuildInAssetsReference ：分析要打AB包的所有资源，将对内建资源的引用替换为提取到Assets/BuildAssets目录下资源的引用。
 5.RevertBuildAssetsReference : 对进行替换过后的资源进行还原，并删除Assets/BuildInAssets下的资源。
+
 **在打包流程中(之前的自动打包工具)，分析依赖之前，调用ReplaceBuildInAssetsReference，加入对内建资源依赖的替换，之后进入正常打包流程，打包结束后再调用RevertBuildInAssetsReference，将替换的资源还原，并删除本地内建资源，这样对正常开发流程完全无感知。**
 
 ### 打包策略配置
