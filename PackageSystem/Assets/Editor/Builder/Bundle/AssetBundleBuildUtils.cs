@@ -112,16 +112,18 @@ public class AssetBundleBuildUtils
             //即使是非独立打包资源，隐式打包的资源也可能会因为有变动而导致所合并的包重打
             if (asset.assetType == AssetType.NoPack)
                 continue;
-            if (!AssetBuildInfoUtils.CacheChangedAsset(asset) && !AssetBuildInfoUtils.IsBundleChanged(asset.bundleName))
+            if (!AssetBuildInfoUtils.CacheChangedAsset(asset) && !AssetBuildInfoUtils.IsRefChildAssetMissingInPreBuildOrGuidChanged(asset) && !AssetBuildInfoUtils.IsBundleChanged(asset.bundleName))
                 continue;
             if (ChangedBundles.Contains(asset.bundleName))
                 continue;
+            //统计有变化的AB
             ChangedBundles.Add(asset.bundleName);
 
             if (BuildBundles.Contains(asset.bundleName))
                 continue;
             BuildBundles.Add(asset.bundleName);
 
+            //我重新打包，那我依赖的AB也都应该重新打包，否则Unity会直接把我依赖的资源合进我的AB里，而他们根据依赖分析的结果，本来就会独立打包，这会造成重复打包。
             GetDepsBundleRecursive(asset.bundleName, deps);
             foreach(string depBundle in deps)
             {
@@ -137,6 +139,11 @@ public class AssetBundleBuildUtils
         EditorUtility.ClearProgressBar();
     }
 
+    /// <summary>
+    /// 递归搜索所有我依赖的AB，包括直接依赖和间接依赖，把它们重新打包
+    /// </summary>
+    /// <param name="bundleName"></param>
+    /// <param name="deps"></param>
     static void GetDepsBundleRecursive(string bundleName, HashSet<string> deps)
     {
         if (!AllBundleInfos.ContainsKey(bundleName))
@@ -171,6 +178,8 @@ public class AssetBundleBuildUtils
                 }
                 var childBundle = AllBundleInfos[child.bundleName];
                 bundle.AddRefChildAsset(childBundle);
+                //如果Child是需要独立打包，那就只依赖Child的包，而Child所依赖的包，则成为间接依赖，加载的时候会通过依赖关系表递归加载
+                //所以此处不需要递归搜索Child依赖的AB包
             }
             else
             {

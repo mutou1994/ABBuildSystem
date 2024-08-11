@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEditor;
 
 [Serializable]
 public class AssetBuildItem
@@ -9,6 +10,7 @@ public class AssetBuildItem
     public string filePath;
     public string assetType;
     public string bundleName;
+    public string guid;
     public string md5;
     public string metaMd5;
 }
@@ -42,6 +44,7 @@ public class AssetBuildInfos
             filePath = filePath,
             assetType = assetType,
             bundleName = bundleName,
+            guid = AssetDatabase.AssetPathToGUID(filePath),
             md5 = Md5Tool.fileMd5(filePath),
             metaMd5 = Md5Tool.fileMd5(string.Format("{0}.meta", filePath))
         };

@@ -272,15 +272,28 @@ public class BuildInAssetsProccesser
                 }
                 else
                 {
-                    name = Path.GetFileNameWithoutExtension(path);
+                    //理论上不存在取不到shader名，进而取了文件名的情况。
+                    //一般取不到shader名的都是 .cginc .glsl .hlsl等这种库文件，会在编译shader的时候编译到shader本身，而不会单独被引用
+                    //出了.compute结尾的ComputeShader取不到Shader名则取文件名
+                    if(path.EndsWith(".compute"))
+                    {
+                        name = Path.GetFileNameWithoutExtension(path);
+                    }
                 }
-                if(!ShaderName2RelaPath.ContainsKey(name))
+                if(!string.IsNullOrEmpty(name))
                 {
-                    ShaderName2RelaPath.Add(name, filePath);
+                    if(!ShaderName2RelaPath.ContainsKey(name))
+                    {
+                        ShaderName2RelaPath.Add(name, filePath);
+                    }
+                    else
+                    {
+                        Debug.LogError("Multi Shder When Gen Name2RelaPath:" + name + " " + ShaderName2RelaPath[name] + " And:" + filePath);
+                    }
                 }
-                else
+                else if(path.EndsWith(".shader") || path.EndsWith(".compute"))
                 {
-                    Debug.LogError("Multi Shder When Gen Name2RelaPath:" + name + " " + ShaderName2RelaPath[name] + " And:" + filePath);
+                    Debug.LogError("ShaderName Not Exits When Gen Name2RelaPath：" + filePath);
                 }
             }
         }
@@ -289,11 +302,11 @@ public class BuildInAssetsProccesser
     static void ChangeBuildInAssetsReference(UnityEngine.Object obj, HashSet<string> checkedMap, Dictionary<string, List<AssetInfo[]>> changedSuccessAssets)
     {
         if (obj is Texture || obj is Texture2D || obj is Sprite || obj is Shader || obj is ComputeShader || obj is TextAsset || obj is Mesh || obj is AudioClip || obj is AnimationClip) return;
-        string relaPath = AssetDatabase.GetAssetPath(obj).Replace("\\", "/");
+        string relaPath = AssetDatabase.GetAssetPath(obj).Replace("\\", "/").ToLower();
         if (relaPath.EndsWith(".ttf") && !(obj is Font)) return;
         if (string.IsNullOrEmpty(relaPath)) return;
         if (relaPath.Equals(buildInPath1) || relaPath.Equals(buildInPath2)) return;
-        if(!(relaPath.EndsWith(".prefab") || relaPath.EndsWith(".unity") || relaPath.EndsWith(".mat") || relaPath.EndsWith(".asset") || relaPath.EndsWith(".ttf"))) return;
+        if(!(relaPath.EndsWith(".prefab") || relaPath.EndsWith(".unity") || relaPath.EndsWith(".mat") || relaPath.EndsWith(".asset") || relaPath.EndsWith(".ttf") || relaPath.EndsWith(".fbx"))) return;
 
         if (!checkedMap.Add(relaPath)) return;
         
@@ -385,23 +398,29 @@ public class BuildInAssetsProccesser
 
         //递归处理依赖资源
         var pathSet = new HashSet<string>();
-        var dps = EditorUtility.CollectDependencies(new UnityEngine.Object[] { obj });
+        //有些依赖可能CollectDependencies获取不到，而GetDependencies能获取到
+        //比如.fbx文件加载进来之后是mesh，mesh本身并没有依赖其他资源，但是这个mesh所在的fbx文件可能有引用其他资源，比如引用了一个材质球
+        //而打包的时候是根据文件路劲，打包mesh所在的.fbx文件，所以需要处理.fbx文件的依赖情况
+        //所以这里应该要用GetDependencies
+        //var dps = EditorUtility.CollectDependencies(new UnityEngine.Object[] { obj });
+        var dps = AssetDatabase.GetDependencies(new string[] { relaPath });
         if(dps != null && dps.Length > 0)
         {
-            foreach (UnityEngine.Object dpAsset in dps)
+            foreach (string dpfile in dps)
             {
+                string filePath = dpfile.Replace("\\", "/").ToLower();
+                var dpAsset = AssetDatabase.LoadMainAssetAtPath(filePath);
                 if (dpAsset is MonoScript || dpAsset is LightingDataAsset)
                     continue;
                 if (dpAsset is Texture || dpAsset is Texture2D || dpAsset is Sprite || dpAsset is Shader || dpAsset is ComputeShader || dpAsset is TextAsset || dpAsset is Mesh || dpAsset is AudioClip || dpAsset is AnimationClip)
                     continue;
-                string filePath = AssetDatabase.GetAssetPath(dpAsset).Replace("\\", "/");
                 if (filePath.EndsWith(".ttf") && !(dpAsset is Font))
                     continue;
                 if (string.IsNullOrEmpty(filePath))
                     continue;
                 if (filePath.Equals(buildInPath1) || filePath.Equals(buildInPath2))
                     continue;
-                if (!(filePath.EndsWith(".prefab") || filePath.EndsWith(".unity") || filePath.EndsWith(".mat") || filePath.EndsWith(".asset") || filePath.EndsWith(".ttf")))
+                if (!(filePath.EndsWith(".prefab") || filePath.EndsWith(".unity") || filePath.EndsWith(".mat") || filePath.EndsWith(".asset") || filePath.EndsWith(".ttf") || filePath.EndsWith(".fbx")))
                     continue;
                 if (filePath.Equals(relaPath))
                     continue;

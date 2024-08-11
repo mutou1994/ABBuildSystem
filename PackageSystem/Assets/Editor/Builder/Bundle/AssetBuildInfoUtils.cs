@@ -192,6 +192,7 @@ public class AssetBuildInfoUtils
                 {
                     var item = CurBuildInfoMap[asset.filePath];
                     item.bundleName = asset.bundleName;
+                    item.guid = AssetDatabase.AssetPathToGUID(asset.filePath);
                     Debug.LogError(string.Format("Error!!! Dunplicate Asset When Generate BuildInfos Path:{0}", asset.filePath));
                     BuildLogger.LogError("Error!!! Dunplicate Asset When Generate BuildInfos Path:{0}", asset.filePath);
                 }
@@ -319,15 +320,51 @@ public class AssetBuildInfoUtils
         {
             return true;
         }
-        if (!IsMetaImportant(asset))
+        //若是guid发生变化,那么依赖我的资源也都需要重新打包,在下方 IsRefChildAssetMissingInPreBuildOrGuidChanged 方法中处理
+        if(!preInfo.guid.Equals(curInfo.guid))
         {
-            return !preInfo.md5.Equals(curInfo.md5);
+            return true;
         }
-        else
+
+        //即使meta文件里面没有记录资源相关的重要信息，如果发生变化，也应该重打
+        //因为有可能meta里变化的就是meta id，这会影响资源的依赖关系。
+        //比如: meta id变化的时候 依赖我的资源就会丢失对我的引用。 而当meta id 恢复时，依赖我的资源也都需要重新打包
+        //而变更过meta id 的我,应该重新打包，因为原先包里的meta id是不对的。这样依赖我的资源才能正确索引到我。
+        //而依赖我的资源也需要重新打包，因为在前一次打的包里，它丢失了对我的引用。
+        return !preInfo.md5.Equals(curInfo.md5) || !preInfo.metaMd5.Equals(curInfo.metaMd5);
+
+        //if (!IsMetaImportant(asset))
+        //{
+        //    return !preInfo.md5.Equals(curInfo.md5);
+        //}
+        //else
+        //{
+        //    return !preInfo.md5.Equals(curInfo.md5) ||
+        //            !preInfo.metaMd5.Equals(curInfo.metaMd5);
+        //}
+    }
+
+    /// <summary>
+    /// 针对前一次打包我依赖的资源存在丢失的情况，可能虽然我自己没有变化，但是前一次打包所依赖的资源丢失了，所打的AB里引用关系也丢失了，所以这次我也需要重打
+    /// 若我所依赖的资源guid发生变化，那么前一次打包即使它参与了，也可能已经丢失了引用，或者是前一次没有丢失，而是这一次将会丢失，所以这次我也需要重打
+    /// </summary>
+    /// <param name="asset"></param>
+    /// <returns></returns>
+    public static bool IsRefChildAssetMissingInPreBuildOrGuidChanged(AssetItemInfo asset)
+    {
+        if (PreBuildInfoMap == null) return true;
+        foreach(var refChildAsset in asset.GetRefChilds())
         {
-            return !preInfo.md5.Equals(curInfo.md5) ||
-                    !preInfo.metaMd5.Equals(curInfo.metaMd5);
+            if(!PreBuildInfoMap.ContainsKey(refChildAsset.filePath))
+            {
+                return true;
+            }
+            var preInfo = PreBuildInfoMap[refChildAsset.filePath];
+            var curInfo = CurBuildInfoMap[refChildAsset.filePath];
+            if (!preInfo.guid.Equals(curInfo.guid))
+                return true;
         }
+        return false;
     }
 
     public static bool IsBundleChanged(string bundleName)
@@ -336,18 +373,50 @@ public class AssetBuildInfoUtils
             return true;
         var preBundleInfo = PreBundleInfoMap[bundleName];
         var curBundleInfo = CurBundleInfoMap[bundleName];
-        if (preBundleInfo.refBundles.Count != curBundleInfo.refBundles.Count)
-            return true;
+
+        
+        //包含的资源数量发生变化，需要重打
         if (preBundleInfo.assets.Count != curBundleInfo.assets.Count)
             return true;
+
+        //经过验证，当丢失资源的时候，打的AB里连引用关系也会丢失，后续再把丢失的资源打AB更新出去的时候，之前引用它的那些资源也索引不到它了。
+        //所以，打AB的时候必须保证引用关系都是正确的，没有发生missing的情况。当我依赖的AB数量，依赖情况等改变的时候，我也需要重打。
+        #region 我依赖的AB发生变化，而我没有变化，我需要重打？
+        if (preBundleInfo.refBundles.Count != curBundleInfo.refBundles.Count)
+            return true;
+        
+        //原先依赖 现在不依赖了 需要重打？
         foreach (string refBundle in preBundleInfo.refBundles)
         {
             if (!curBundleInfo.refBundles.Contains(refBundle))
                 return true;
         }
+
+        //原先不依赖，现在依赖了 需要重打？
+        foreach(string refBundle in curBundleInfo.refBundles)
+        {
+            if (!preBundleInfo.refBundles.Contains(refBundle))
+                return true;
+        }
+        #endregion
+
+        #region 依赖我的AB发生变化，而我没有变化，我需要重打？
+        //需要，不然Unity会默认把我合进他的AB包里。
+        //但是这一部分没法在这里判断，应该去遍历依赖我的那个资源的所有依赖，他们都需要重新打包。
+        //这块逻辑已经做在别处了，见AssetBundleBuildUtils 的 GetDepsBundleRecursive 方法。
+        #endregion
+
+        //包含的资源发生变化 原先有，现在没有了， 需要重打
         foreach (string asset in preBundleInfo.assets)
         {
             if (!curBundleInfo.assets.Contains(asset))
+                return true;
+        }
+
+        //包含的资源发生变化 原先没有，现在有了 需要重打
+        foreach(string asset in curBundleInfo.assets)
+        {
+            if (!preBundleInfo.assets.Contains(asset))
                 return true;
         }
         return false;
@@ -420,6 +489,7 @@ public class AssetBuildInfoUtils
             sb.AppendFormat("filePath: {0}\n", asset.filePath);
             sb.AppendFormat("assetType: {0} | {1}\n", preInfo == null ? "Null" : preInfo.assetType, curInfo.assetType);
             sb.AppendFormat("bundleName: {0} | {1}\n", preInfo == null ? "Null" : preInfo.bundleName, curInfo.bundleName);
+            sb.AppendFormat("guid: {0} | {1}\n", preInfo == null ? "Null" : preInfo.guid, curInfo.guid);
             sb.AppendFormat("Md5: {0} | {1}\n", preInfo == null ? "Null" : preInfo.md5, curInfo.md5);
             sb.AppendFormat("IsImportMeta: {0}\n", AssetBuildInfoUtils.IsMetaImportant(asset).ToString());
             sb.AppendFormat("MetaMd5: {0} | {1}\n", preInfo == null ? "Null" : preInfo.metaMd5, curInfo.metaMd5);
